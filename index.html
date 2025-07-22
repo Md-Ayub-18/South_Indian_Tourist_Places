@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>south indian tourist places</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .gender-options {
+        display: flex;
+        gap: 15px;
+        margin: 10px 0;
+      }
+      .gender-option {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-box">
+        <h1><u>Login</u></h1>
+        <form>
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <button type="submit">Login</button>
+        </form>
+        <p class="message">
+          Don't have an account? <a href="#" id="show-signup">Sign Up</a>
+        </p>
+      </div>
+
+      <div class="form-box hidden">
+        <h1><u>Sign Up</u></h1>
+        <form>
+          <input type="text" placeholder="First Name" required />
+          <input type="text" placeholder="last name" required />
+          <input type="date" name="year" />
+          <label>Gender:</label>
+          <div class="gender-options">
+            <div class="gender-option">
+              <input type="radio" id="male" name="gender" value="male" />
+              <label for="male">Male</label>
+            </div>
+            <div class="gender-option">
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="female">Female</label>
+            </div>
+            <div class="gender-option">
+              <input type="radio" id="other" name="gender" value="other" />
+              <label for="other">Other</label>
+            </div>
+          </div>
+          <input type="email" placeholder="Email" required />
+          <button type="submit">create account</button>
+        </form>
+        <br />
+        <hr />
+        <br />
+        <p>
+          <span>Note:</span> After creating an account, your password will be
+          the combination of your name and the year of birth
+        </p>
+        <img src="./passwordex.JPG" alt="example password" />
+        <br />
+        <br />
+        <p class="message">login? <a href="#" id="show-login">Login</a></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
