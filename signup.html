@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="signup-container">
+      <h1>Create Account</h1>
+      <form>
+        <div class="form-group">
+          <label for="firstname">First Name:</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter your full name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="Lastname">Last Name:</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter your full name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="DOB">Date of Birth</label>
+          <input type="date" name="year" required />
+        </div>
+        <div class="form-group">
+          <label for="Gender">Gender: </label>
+          <select name="gender">
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option></select
+          ><br />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+
+        <button type="submit">Sign Up</button>
+      </form>
+      <div class="login-link">
+        <p>Already have an account? <a href="./login.html">Log in</a></p>
+      </div>
+      <br />
+      <p>
+        <span>Note:</span> After creating an account, your password will be the
+        combination of your name and the year of birth
+      </p>
+      <img src="./passwordex.JPG" alt="example password" />
+      <br />
+    </div>
+  </body>
+</html>
