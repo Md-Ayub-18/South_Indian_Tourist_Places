@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madurai - The Cultural Capital of Tamil Nadu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2a5b9b 0%, #56cc54 52%, #ceed53 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2a5b9b;
+        }
+        
+        .back-button {
+            background-color: #2a5b9b;
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .back-button:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-bottom: 2rem;
+            color: white;
+        }
+        
+        .page-title h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Attractions Grid */
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .attraction-card {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .attraction-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card-img {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .attraction-card:hover .card-img img {
+            transform: scale(1.1);
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+            position: relative;
+        }
+        
+        .card-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: #2a5b9b;
+        }
+        
+        .card-content p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+        
+        .explore-btn {
+            display: inline-block;
+            background-color: #2a5b9b;
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .explore-btn:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #2a5b9b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #56cc54;
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #2a5b9b;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .back-to-top.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .back-to-top:hover {
+            background-color: #56cc54;
+            transform: translateY(-5px);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .page-title h1 {
+                font-size: 2.5rem;
+            }
+            
+            .attractions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+                Madurai Tourism
+            </div>
+            <a href="./tamilnadu.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Tamil Nadu
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Explore Madurai</h1>
+            <p>One of the oldest cities in India, famous for its magnificent temples and rich cultural heritage</p>
+        </div>
+
+        <!-- Attractions Grid -->
+        <div class="attractions-grid">
+            <!-- Meenakshi Amman Temple -->
+            <div class="attraction-card">
+                <div class="card-img">
+                    <img src="../images/tamilnadu/madurai/Meenakshi Amman Temple.jpg" alt="Meenakshi Amman Temple">
+                </div>
+                <div class="card-content">
+                    <h2>Meenakshi Amman Temple</h2>
+                    <p>A historic Hindu temple dedicated to Goddess Meenakshi and Lord Sundareswarar, known for its stunning architecture and intricate sculptures.</p>
+                    <a href="./Meenakshi_Amman_Temple.html" class="explore-btn">Explore</a>
+                </div>
+            </div>
+            
+            <!-- Thirumalai Nayakkar Palace -->
+            <div class="attraction-card">
+                <div class="card-img">
+                    <img src="../images/tamilnadu/madurai/Thirumalai Nayakkar Palace1.jpeg" alt="Thirumalai Nayakkar Palace">
+                </div>
+                <div class="card-content">
+                    <h2>Thirumalai Nayakkar Palace</h2>
+                    <p>A 17th-century palace built by King Thirumalai Nayak, showcasing a blend of Dravidian and Islamic architectural styles.</p>
+                    <a href="./Thirumalai_Nayakkar_Palace.html" class="explore-btn">Explore</a>
+                </div>
+            </div>
+            
+            <!-- Gandhi Memorial Museum -->
+            <div class="attraction-card">
+                <div class="card-img">
+                    <img src="../images/tamilnadu/madurai/Gandhi Memorial Museum.jpg" alt="Gandhi Memorial Museum">
+                </div>
+                <div class="card-content">
+                    <h2>Gandhi Memorial Museum</h2>
+                    <p>A museum dedicated to Mahatma Gandhi, showcasing his life, philosophy, and the history of India's freedom struggle.</p>
+                    <a href="./Gandhi_memorial_museum.html" class="explore-btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Cultural Heritage of Madurai</h3>
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Back to Top Button -->
+        <a href="#" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <script>
+        // Simple animation for cards
+        const attractionCards = document.querySelectorAll('.attraction-card');
+        
+        attractionCards.forEach((card, index) => {
+            card.style.opacity = "0";
+            card.style.transform = "translateY(20px)";
+            card.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+            
+            setTimeout(() => {
+                card.style.opacity = "1";
+                card.style.transform = "translateY(0)";
+            }, 100 + (index * 100));
+        });
+
+        // Back to top button functionality
+        const backToTopButton = document.querySelector(".back-to-top");
+        
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add("active");
+            } else {
+                backToTopButton.classList.remove("active");
+            }
+        });
+        
+        backToTopButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+</html>

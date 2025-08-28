@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Araku Valley - The Kashmir of Andhra Pradesh</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 52%, #3498db 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #27ae60;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #2ecc71;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Attractions Grid */
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .attraction-card {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .attraction-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .card-img {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .attraction-card:hover .card-img img {
+            transform: scale(1.1);
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        .card-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #27ae60;
+        }
+        
+        .card-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .explore-btn {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            background-color: #27ae60;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .explore-btn:hover {
+            background-color: #2ecc71;
+            transform: translateY(-3px);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #27ae60;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #2ecc71;
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #27ae60;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .back-to-top:hover {
+            background-color: #2ecc71;
+            transform: translateY(-5px);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .attractions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+                Andhra Pradesh Tourism
+            </div>
+            <a href="./Andhra_Pradesh.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Andhra Pradesh
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Explore Araku Valley</h1>
+            <p>The scenic hill station known for its coffee plantations, waterfalls, and tribal culture</p>
+        </div>
+
+        <!-- Attractions Grid -->
+        <div class="attractions-grid">
+            <!-- Borra Caves -->
+            <div class="attraction-card">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1597581984726-1fd0a1f4c8f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Borra Caves">
+                </div>
+                <div class="card-content">
+                    <h2>Borra Caves</h2>
+                    <p>Million-year-old limestone caves with fascinating stalactite and stalagmite formations, located at an elevation of 1400 meters.</p>
+                    <a href="./borra_caves.html" class="explore-btn">Explore</a>
+                </div>
+            </div>
+            
+            <!-- Katiki Waterfalls -->
+            <div class="attraction-card">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1624976509936-ae73ce1c5b21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Katiki Waterfalls">
+                </div>
+                <div class="card-content">
+                    <h2>Katiki Waterfalls</h2>
+                    <p>Picturesque waterfall surrounded by dense forests, offering a refreshing retreat and breathtaking views.</p>
+                    <a href="./katiki_waterfalls.html" class="explore-btn">Explore</a>
+                </div>
+            </div>
+            
+            <!-- Coffee Plantations -->
+            <div class="attraction-card">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1595877244574-e90ce41ce089?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Coffee Plantations">
+                </div>
+                <div class="card-content">
+                    <h2>Coffee Plantations</h2>
+                    <p>Vast expanses of coffee estates offering guided tours to learn about coffee cultivation and processing.</p>
+                    <a href="./coffee_plantations.html" class="explore-btn">Explore</a>
+                </div>
+            </div>
+            
+            <!-- Tribal Museum -->
+            <div class="attraction-card">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1580477667995-2b94f01c9516?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Tribal Museum">
+                </div>
+                <div class="card-content">
+                    <h2>Tribal Museum</h2>
+                    <p>Showcasing the rich cultural heritage of the local tribes with artifacts, handicrafts, and traditional tools.</p>
+                    <a href="./tribal_museum.html" class="explore-btn">Explore</a>
+                </div>
+            </div>
+            
+            <!-- Chaparai Water Cascade -->
+            <div class="attraction-card">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1576080533375-2a768a2dcc6c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Chaparai Water Cascade">
+                </div>
+                <div class="card-content">
+                    <h2>Chaparai Water Cascade</h2>
+                    <p>Natural water slides and pools formed by granite rocks, perfect for a relaxing dip in cool waters.</p>
+                    <a href="./chaparai_water_cascade.html" class="explore-btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Natural Beauty of Araku Valley</h3>
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+        // Simple animation for cards
+        const attractionCards = document.querySelectorAll('.attraction-card');
+        
+        attractionCards.forEach((card, index) => {
+            card.style.opacity = "0";
+            card.style.transform = "translateY(20px)";
+            card.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+            
+            setTimeout(() => {
+                card.style.opacity = "1";
+                card.style.transform = "translateY(0)";
+            }, 100 + (index * 100));
+        });
+
+        // Back to top button functionality
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.opacity = '1';
+                backToTopButton.style.visibility = 'visible';
+            } else {
+                backToTopButton.style.opacity = '0';
+                backToTopButton.style.visibility = 'hidden';
+            }
+        });
+        
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

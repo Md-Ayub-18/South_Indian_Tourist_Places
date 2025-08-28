@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abbey Falls - Coorg's Majestic Waterfall</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2a5b9b 0%, #56cc54 52%, #ceed53 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2a5b9b;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #2a5b9b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2a5b9b;
+            border-bottom: 2px solid #56cc54;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(42, 91, 155, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #2a5b9b;
+        }
+        
+        .info-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px край(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #2a5b9b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #56cc54;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+                Coorg Tourism
+            </div>
+            <a href="./coorg.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Coorg
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Abbey Falls - Coorg's Majestic Cascade</h1>
+            <p>A breathtaking waterfall nestled amidst coffee plantations and spice estates</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="https://images.unsplash.com/photo-1591843336747-642350c6e474?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Abbey Falls">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Abbey Falls</h2>
+                <p>Abbey Falls is one of the most spectacular waterfalls in Coorg (Kodagu), located amidst private coffee plantations and spice estates. The waterfall is formed by the Kaveri River as it cascades down from a height of about 70 feet, creating a magnificent sight especially during the monsoon season when the water flow is at its peak. The falls are surrounded by dense tropical vegetation, coffee plants, and pepper vines, creating a picturesque natural setting.</p>
+                <p>The name "Abbey" is believed to be derived from the nearby coffee estate that was once owned by British officials. The falls were originally called "Jessie Falls" after the daughter of a British officer, but over time the name evolved to Abbey Falls. The sound of the gushing water, the mist that rises from the falls, and the lush green surroundings create a mesmerizing experience for visitors.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-ruler-vertical"></i> Height</h3>
+                        <p>70 feet (21 meters)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-water"></i> River Source</h3>
+                        <p>Kaveri River</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Distance from Madikeri</h3>
+                        <p>8 kilometers</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-calendar-alt"></i> Best Time to Visit</h3>
+                        <p>June to November</p>
+                    </div>
+                </div>
+                
+                <h2>Natural Surroundings</h2>
+                <p>Abbey Falls is nestled in the Western Ghats, surrounded by lush coffee plantations, spice gardens, and dense tropical forests. The approach to the falls involves walking through beautiful coffee and cardamom plantations, with the sound of the waterfall growing louder as you get closer. The area is rich in biodiversity, with various species of birds, butterflies, and small mammals inhabiting the surrounding forests.</p>
+                <p>The hanging bridge across the falls offers a spectacular view of the cascading waters and the deep valley below. During the monsoon season, the waterfall transforms into a thundering cascade, with the water plunging with tremendous force and creating a misty spray that covers the surrounding area. The rocks around the falls are slippery, so visitors are advised to be cautious while exploring the area.</p>
+                
+                <h2>Visitor Experience</h2>
+                <p>To reach Abbey Falls, visitors need to walk about 200 meters from the entrance through a path that winds through coffee and spice plantations. The walk is relatively easy and offers beautiful views of the surrounding landscape. There are several viewpoints along the way where visitors can stop to take photographs and enjoy the natural beauty.</p>
+                <p>The main viewing area has a hanging bridge that provides an excellent vantage point to see the waterfall in all its glory. There are also several stalls near the entrance selling local snacks, coffee, and souvenirs. The best time to visit is during the early morning or late afternoon when the sunlight creates beautiful rainbows in the mist rising from the falls.</p>
+                
+                <h2>Geological Formation</h2>
+                <p>Abbey Falls is formed as the Kaveri River flows through a rugged terrain of granite rocks and laterite soil, which are characteristic of the Western Ghats region. The waterfall has carved a deep gorge over centuries, creating a spectacular natural amphitheater. The rocks around the falls show interesting geological formations, with layers of different rock types visible in the cliff faces.</p>
+                <p>The area around Abbey Falls is part of the Western Ghats, which is recognized as a UNESCO World Heritage Site for its exceptional biodiversity and ecological significance. The rocks and soil in this region are rich in minerals, which contribute to the unique flavor of the coffee grown in the surrounding plantations.</p>
+                
+                <h2>Visitor Information</h2>
+                <p>Abbey Falls is open daily from 9:00 AM to 5:00 PM. There is a nominal entrance fee for visitors. The falls are located about 8 km from Madikeri, the district headquarters of Coorg, and can be easily reached by taxi or auto-rickshaw. The road to the falls is well-maintained but can be crowded during peak tourist season.</p>
+                <p>The best time to visit Abbey Falls is during the monsoon season (June to September) when the water flow is at its maximum, creating a spectacular sight. However, visitors should exercise caution during this time as the rocks can be slippery. The post-monsoon months (October to November) also offer good water flow with better weather conditions for photography and exploration.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Abbey Falls Full View">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1512273222628-4caea86f5e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Hanging Bridge View">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1518834107812-67d4d91804cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Monsoon Season">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Surrounding Plantations">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Natural Beauty of Coorg</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./coorg.html">Back to Coorg</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubbon Park - Bangalore's Green Lung</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2a5b9b 0%, #56cc54 52%, #ceed53 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2a5b9b;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #2a5b9b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2a5b9b;
+            border-bottom: 2px solid #56cc54;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(42, 91, 155, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #2a5b9b;
+        }
+        
+        .info-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #2a5b9b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #56cc54;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+                Bangalore Tourism
+            </div>
+            <a href="./bangalore.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Bangalore
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Cubbon Park - Bangalore's Green Lung</h1>
+            <p>A sprawling green oasis in the heart of the city, perfect for nature lovers and peace seekers</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="../images/karnataka/bangalore/cubbon-park.jpg" alt="Cubbon Park">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Cubbon Park</h2>
+                <p>Cubbon Park is a historic park located in the heart of Bangalore city, spread over 300 acres. It was established in 1870 by Major General Richard Sankey, the then British Chief Engineer of Mysore State, and originally named "Meade's Park" after Sir John Meade, the acting Commissioner of Mysore in 1870. Later, it was renamed to honor Sir Mark Cubbon, the longest-serving commissioner of the Bangalore region during the British Raj.</p>
+                <p>The park is known for its rich collection of numerous indigenous and exotic botanical species, lush green lawns, flowering trees, and beautiful monuments. It serves as the green lung for the city, providing a peaceful retreat from the hustle and bustle of urban life. The park is maintained by the Horticulture Department of the Government of Karnataka.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-history"></i> Established</h3>
+                        <p>1870 by Major General Richard Sankey</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-expand-arrows-alt"></i> Area</h3>
+                        <p>300 acres (120 hectares)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-tree"></i> Plant Species</h3>
+                        <p>Over 6,000 trees and plants</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>Central Bangalore, Karnataka</p>
+                    </div>
+                </div>
+                
+                <h2>Park Features and Attractions</h2>
+                <p>Cubbon Park is not just a green space but also houses several important buildings and attractions. The park contains the State Archaeological Museum, Visvesvaraya Industrial and Technological Museum, Venkatappa Art Gallery, and the famous Attara Kacheri (High Court) building. The majestic Vidhana Soudha, the seat of the state legislature, is located adjacent to the park.</p>
+                <p>The park features well-laid-out walking paths, beautiful flower beds, and numerous statues of famous personalities. The Bal Bhavishya Institute (Children's Wonderland) within the park offers amusement rides and entertainment for children. The park also has a toy train that takes visitors on a tour around the park, which is particularly popular with children.</p>
+                
+                <h2>Flora and Fauna</h2>
+                <p>Cubbon Park is home to more than 6,000 trees and plants, representing about 100 species. The park has numerous exotic and indigenous tree species including Java fig, cassia, silver oak, mahogany, and many more. The extensive bamboo groves add to the park's beauty and provide a habitat for various bird species.</p>
+                <p>The park serves as an important habitat for urban wildlife, particularly birds. Birdwatchers can spot numerous species such as parakeets, kingfishers, spotted owlets, and many migratory birds during winter. The park also supports a population of squirrels and butterflies, adding to its biodiversity.</p>
+                
+                <h2>Visitor Information</h2>
+                <p>Cubbon Park is open every day from 6:00 AM to 6:00 PM. The park remains closed on Mondays for maintenance. Entry to the park is free, though some attractions within the park may charge a nominal fee. The best time to visit is during the early morning or late afternoon when the weather is pleasant and the park is less crowded.</p>
+                <p>Visitors can enjoy walking, jogging, yoga, and photography in the park. The park has designated areas for picnics and relaxation. Guided nature walks are occasionally organized by various environmental groups. Visitors are encouraged to maintain the park's cleanliness and avoid plucking flowers or damaging plants.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="../images/karnataka/bangalore/cubbon-park-walkways.jpg" alt="Cubbon Park Walkways">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/karnataka/bangalore/cubbon-park-flora.jpg" alt="Flora in Cubbon Park">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/karnataka/bangalore/cubbon-park-attara-kacheri.jpg" alt="Attara Kacheri in Cubbon Park">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/karnataka/bangalore/cubbon-park-statues.jpg" alt="Statues in Cubbon Park">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Natural Beauty of Bangalore</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./bangalore.html">Back to Bangalore</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>

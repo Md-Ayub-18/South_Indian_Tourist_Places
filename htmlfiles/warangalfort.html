@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warangal Fort - Historical Marvel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2a5b9b 0%, #56cc54 52%, #ceed53 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2a5b9b;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #2a5b9b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2a5b9b;
+            border-bottom: 2px solid #56cc54;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(42, 91, 155, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #2a5b9b;
+        }
+        
+        .info-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: #2a5b9b;
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #2a5b9b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #56cc54;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+                Warangal Tourism
+            </div>
+            <a href="./warangal.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to cities
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Warangal Fort - Historical Marvel</h1>
+            <p>A magnificent example of Kakatiya architecture and a testament to the region's rich history</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="../images/telangana/warangal/warangal-fort-india-tourism-history.jpg" alt="Warangal Fort">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Warangal Fort</h2>
+                <p>Warangal Fort is a magnificent historical monument located in Warangal, Telangana. Built in the 13th century during the reign of the Kakatiya dynasty, the fort exemplifies the architectural brilliance and strategic planning of the Kakatiya rulers. The fort complex includes massive stone gateways, impressive towers, and intricate sculptures that reflect the rich cultural heritage of the region.</p>
+                <p>Originally known as Orugallu (meaning one stone), the fort was the capital of the Kakatiya dynasty from the 12th to the 14th centuries. Despite being partially in ruins today, the fort's remains speak volumes about its past grandeur and the advanced engineering skills of its builders.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-calendar-alt"></i> Built In</h3>
+                        <p>13th Century (1213 CE)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-archway"></i> Architectural Style</h3>
+                        <p>Kakatiya Architecture</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marked-alt"></i> Complex Area</h3>
+                        <p>Approx. 19 km circumference</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>Warangal, Telangana, India</p>
+                    </div>
+                </div>
+                
+                <h2>Architectural Significance</h2>
+                <p>Warangal Fort is renowned for its unique architectural features, including four large stone gateways (called Keerthi Thoranams) that form the entrance to the destroyed Shiva temple. These elaborately carved gateways are considered masterpieces of Kakatiya architecture. The fort was constructed using massive boulders and features three concentric circular walls for defense.</p>
+                <p>The most striking feature of the fort is the thousand-pillar temple, which showcases exquisite stone carvings, detailed sculptures, and impressive pillars. The temple is dedicated to Lord Shiva, Vishnu, and Surya and stands as a testament to the religious harmony during the Kakatiya period.</p>
+                
+                <h2>Historical Importance</h2>
+                <p>Warangal Fort served as the capital of the Kakatiya dynasty from the 12th to the 14th centuries and witnessed many battles against the Delhi Sultanate. Despite being attacked and damaged multiple times, the fort's remains continue to showcase the resilience and architectural prowess of the Kakatiya rulers.</p>
+                <p>The fort was declared a UNESCO World Heritage Site in 2021 under the serial nomination "Kakatiya Rudreshwara (Ramappa) Temple, Telangana," recognizing its outstanding universal value and historical significance.</p>
+                
+                <h2>Visitor Information</h2>
+                <p>Warangal Fort is open to visitors every day from 9:00 AM to 5:00 PM. The best time to visit is from October to March when the weather is pleasant. Light and sound shows are organized in the evenings, depicting the history of the Kakatiya dynasty. Guides are available for detailed historical information, and there's a small museum nearby displaying artifacts found at the site.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="../images/telangana/warangal/warangal-fort-warangal-telangana.jpeg" alt="Warangal Fort Gateway">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/telangana/warangal/warangalfort view.jpeg" alt="Thousand Pillar Temple">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/telangana/warangal/warangal-fort-warangal-telanganaarch.jpeg" alt="Intricate Sculptures">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/telangana/warangal/warangal-fort-citygr.jpg" alt="Aerial View of Warangal Fort">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Heritage of Telangana</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./hyderabad.html">Go To Hyderabad</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>

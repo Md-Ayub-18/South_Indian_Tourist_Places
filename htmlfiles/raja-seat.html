@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raja's Seat - Coorg's Royal Viewpoint</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #8e44ad 0%, #3498db 52%, #2ecc71 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #8e44ad;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #8e44ad;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #3498db;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #8e44ad;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(142, 68, 173, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #8e44ad;
+        }
+        
+        .info-card h3 {
+            color: #8e44ad;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #8e44ad;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #3498db;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+                Coorg Tourism
+            </div>
+            <a href="./coorg.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Coorg
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Raja's Seat - The Royal Viewpoint of Coorg</h1>
+            <p>A magnificent garden and viewpoint where the Kings of Coorg spent their evenings</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Raja's Seat">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Raja's Seat</h2>
+                <p>Raja's Seat, which translates to "Seat of the Kings," is a beautiful seasonal garden and viewpoint in Madikeri, Coorg. It was a favorite leisure spot for the kings of Kodagu (Coorg) who would come here to enjoy spectacular sunsets and panoramic views of the surrounding valleys and mountains.</p>
+                <p>The site features a beautifully maintained garden with flowering plants, musical fountains, and a structure that resembles a balcony. According to legend, the kings of Kodagu would spend their evenings here with their queens, enjoying the breathtaking views and cool breeze. The place offers one of the most spectacular sunset views in all of Coorg.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>Madikeri, Coorg, Karnataka</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-mountain"></i> Elevation</h3>
+                        <p>1,525 meters above sea level</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-clock"></i> Best Time to Visit</h3>
+                        <p>October to March (for clear views)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-eye"></i> Famous For</h3>
+                        <p>Sunset views and panoramic landscapes</p>
+                    </div>
+                </div>
+                
+                <h2>Historical Significance</h2>
+                <p>Raja's Seat holds great historical significance as it was the preferred relaxation spot for the Kodagu royalty. The Haleri dynasty kings, who ruled Coorg from the 16th to the 19th century, would regularly visit this spot to enjoy the serene atmosphere and magnificent views.</p>
+                <p>The structure at Raja's Seat consists of a covered balcony with four pillars connected by arches, which was built in memory of the royal heritage. The site has been developed into a beautiful garden while maintaining its historical charm and significance.</p>
+                
+                <h2>Garden and Attractions</h2>
+                <p>The Raja's Seat garden is beautifully maintained with seasonal flowers, lush green lawns, and well-manicured pathways. The garden features a variety of flowering plants that bloom throughout the year, creating a colorful and vibrant atmosphere.</p>
+                <p>The main attractions include the musical fountain that operates during evening hours, the toy train that takes visitors around the garden, and the viewing platform that offers breathtaking views of the surrounding mountains and valleys. The garden is particularly beautiful during the monsoon season when the entire landscape turns lush green.</p>
+                
+                <h2>Sunset Experience</h2>
+                <p>The primary reason visitors flock to Raja's Seat is to witness the spectacular sunset. As the sun descends behind the Western Ghats, it creates a magical play of colors across the sky. The view of the sun setting behind the mist-covered mountains is truly mesmerizing.</p>
+                <p>During clear weather, visitors can see as far as the plains of Karnataka and even glimpse the faint outline of the Arabian Sea in the distance. The cool breeze and the tranquil atmosphere make it a perfect spot for photography, meditation, and simply soaking in nature's beauty.</p>
+                
+                <h2>Visitor Information</h2>
+                <p>Raja's Seat is open from 5:30 AM to 8:00 PM daily. The entry fee is nominal, with additional charges for camera usage. The best time to visit is during the evening hours to enjoy the sunset and the musical fountain show.</p>
+                <p>The musical fountain show operates twice daily - in the evening around 6:30 PM and again at 7:00 PM. Visitors should arrive early to get good seating arrangements, especially during weekends and holidays when it can get crowded. The garden has seating arrangements, food stalls, and clean restroom facilities.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Sunset at Raja's Seat">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Garden View">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Panoramic Valley View">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Mountain Landscape">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Natural Beauty of Coorg</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./coorg.html">Back to Coorg</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>

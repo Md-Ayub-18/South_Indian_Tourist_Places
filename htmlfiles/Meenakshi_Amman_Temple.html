@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meenakshi Amman Temple - Madurai's Sacred Jewel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2a5b9b 0%, #56cc54 52%, #ceed53 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2a5b9b;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #2a5b9b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2a5b9b;
+            border-bottom: 2px solid #56cc54;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(42, 91, 155, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #2a5b9b;
+        }
+        
+        .info-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: #2a5b9b;
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #2a5b9b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #56cc54;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+                Tamil Nadu Tourism
+            </div>
+            <a href="./Madurai.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Madurai
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Meenakshi Amman Temple - Soul of Madurai</h1>
+            <p>An architectural masterpiece and one of the most sacred Shiva temples in the world</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="../images/tamilnadu/madurai/Meenakshi Amman Temple.jpg" alt="Meenakshi Amman Temple">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Meenakshi Amman Temple</h2>
+                <p>Meenakshi Amman Temple is a historic Hindu temple located on the southern bank of the Vaigai River in the temple city of Madurai, Tamil Nadu. Dedicated to Goddess Meenakshi (a form of Parvati) and her consort, Sundareshwar (a form of Shiva), the temple is the heart and soul of Madurai and one of the most important pilgrimage sites in South India.</p>
+                <p>The temple complex covers 14 acres and is surrounded by massive walls that were built in response to invasions. The entire structure is a magnificent example of Dravidian architecture, with its towering gopurams (gateway towers), intricate sculptures, sacred tanks, and pillared halls. The temple attracts thousands of visitors daily and is particularly famous for its astonishing sculpture and architectural splendor.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-history"></i> Original Built</h3>
+                        <p>6th century AD (Current structure 16th-17th century)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>Madurai, Tamil Nadu, India</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-archway"></i> Architectural Style</h3>
+                        <p>Dravidian Architecture</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-list-ol"></i> Gopurams</h3>
+                        <p>14 Towering Gateway Towers</p>
+                    </div>
+                </div>
+                
+                <h2>Historical Significance</h2>
+                <p>The Meenakshi Amman Temple has a rich history dating back to the 6th century AD, though the current structure was built between the 16th and 17th centuries during the reign of the Nayak dynasty. The temple is mentioned in ancient Tamil literature, and the Sangam works describe the temple as the central feature of the city.</p>
+                <p>The temple was largely destroyed by the Muslim invader Malik Kafur in 1310 AD and was rebuilt in the 16th century by the first Nayak king of Madurai, Vishwanatha Nayak. The magnificent gopurams were added by various rulers over centuries, with the tallest southern gopuram reaching 170 feet high.</p>
+                <p>The temple not only serves as a religious center but also as an economic and cultural hub of Madurai. It has survived numerous invasions and natural calamities, standing as a testament to the resilience of Hindu culture and architecture.</p>
+                
+                <h2>Architectural Marvel</h2>
+                <p>The Meenakshi Temple is renowned for its spectacular architecture:</p>
+                <p><strong>• Gopurams (Gateway Towers):</strong> The temple has 14 towering gopurams, the tallest being the southern tower at 51.9 meters (170 ft) high. Each gopuram is a multi-storied structure covered with thousands of stone figures of gods, goddesses, demons, and mythological figures.</p>
+                <p><strong>• Hall of Thousand Pillars (Aayiram Kaal Mandapam):</strong> This hall actually contains 985 beautifully carved pillars, each with unique sculptures. The hall now houses a temple art museum.</p>
+                <p><strong>• Sacred Tanks:</strong> The temple complex contains several water tanks, with Potramarai Kulam (Golden Lotus Tank) being the most sacred, where pilgrims bathe before worship.</p>
+                <p><strong>• Main Shrines:</strong> The temple has two main shrines - one dedicated to Meenakshi (Parvati) and the other to Sundareshwar (Shiva), both adorned with gold plated vimanas (towers over the sanctum).</p>
+                <p><strong>• Musical Pillars:</strong> The temple features musical pillars that produce different musical notes when tapped, demonstrating extraordinary craftsmanship.</p>
+                
+                <h2>Religious Significance and Festivals</h2>
+                <p>The Meenakshi Temple is one of the Paadal Petra Sthalams, which are 275 temples of Shiva that are revered in the poems of Tamil saints. The temple is particularly famous for the Meenakshi-Sundareshwarar wedding ceremony that is celebrated annually as Chithirai Festival, attracting over a million devotees.</p>
+                <p>Other important festivals include:</p>
+                <p><strong>• Avani Moola Festival:</strong> Celebrates the divine marriage of Meenakshi and Sundareshwarar</p>
+                <p><strong>• Navaratri:</strong> Nine-day festival dedicated to the goddess</p>
+                <p><strong>• Float Festival (Theppotsavam):</strong> The deities are taken out in a procession on a float in the temple tank</p>
+                <p><strong>• Masi Mandala Utsavam:</strong> 45-day festival during February-March</p>
+                
+                <h2>Visitor Information</h2>
+                <p>The temple is open from 5:00 AM to 12:30 PM and from 4:00 PM to 10:00 PM daily. The best time to visit is during the early morning hours for peaceful darshan (viewing of the deity) or during festival times to witness the temple in its full glory.</p>
+                <p>There is no entry fee, but special darshan tickets are available for quicker access to the main shrines. Photography is allowed in the outer corridors but prohibited inside the sanctum sanctorum. Dress code requires conservative clothing - men should wear dhoti or pants, and women should wear saree or salwar kameez.</p>
+                <p>Guided tours are available and highly recommended to understand the temple's rich history, architecture, and symbolism. The temple museum is open from 8:00 AM to 7:00 PM and charges a nominal entry fee.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/madurai/Gopuram meenakshi.jpg" alt="Temple Gopuram">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/madurai/Meenakshi Amman Temple1000.jpg" alt="Thousand Pillar Hall">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/madurai/pngtree-detail-of-meenakshi-temple-in-madurai-photo-image_1859275.jpg" alt="Intricate Sculptures">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/madurai/Temple Festival meenakshi.jpg" alt="Temple Festival">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Spiritual Heritage of Tamil Nadu</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./madurai.html">Back to Madurai</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>

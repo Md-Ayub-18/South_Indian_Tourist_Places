@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thirumalai Nayakkar Palace - Madurai's Royal Marvel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2a5b9b 0%, #56cc54 52%, #ceed53 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2a5b9b;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #2a5b9b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2a5b9b;
+            border-bottom: 2px solid #56cc54;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(42, 91, 155, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #2a5b9b;
+        }
+        
+        .info-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: #2a5b9b;
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #2a5b9b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #56cc54;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+               Madurai Tourism
+            </div>
+            <a href="./Madurai.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Madurai
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Thirumalai Nayakkar Palace - Royal Splendor</h1>
+            <p>A magnificent 17th-century palace showcasing Indo-Saracenic architectural brilliance</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="../images/tamilnadu/madurai/Thirumalai Nayakkar Palace1.jpeg" alt="Thirumalai Nayakkar Palace">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Thirumalai Nayakkar Palace</h2>
+                <p>Thirumalai Nayakkar Palace is a magnificent 17th-century palace complex located in the temple city of Madurai, Tamil Nadu. Built in 1636 AD by King Thirumalai Nayak, one of the most notable rulers of the Nayak dynasty, the palace is renowned for its exquisite architectural style that blends Dravidian and Islamic designs, creating a unique Indo-Saracenic appearance.</p>
+                <p>Originally, the palace was four times larger than its present size and was considered one of the grandest palaces of its time. Though much of the structure was destroyed over time, the remaining portion has been meticulously restored and stands as a testament to the grandeur of the Nayak rule and their architectural prowess.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-calendar-alt"></i> Built In</h3>
+                        <p>1636 AD</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>Madurai, Tamil Nadu, India</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-archway"></i> Architectural Style</h3>
+                        <p>Indo-Saracenic (Dravidian-Islamic fusion)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-history"></i> Restoration</h3>
+                        <p>Major restoration in the 19th century by Lord Napier</p>
+                    </div>
+                </div>
+                
+                <h2>Architectural Marvel</h2>
+                <p>The palace is celebrated for its massive scale and exquisite craftsmanship. The most striking feature is the massive courtyard surrounded by gigantic circular pillars, each standing 20 meters tall and 4 meters in circumference. The pillars support arches that are decorated with elaborate stucco work.</p>
+                <p>The palace complex is divided into two main sections: Swarga Vilasam (Celestial Pavilion) and Ranga Vilasam. The Swarga Vilasam served as the throne room and housed the royal residence, entertainment halls, shrine, and theater. The magnificent dome of the central courtyard rises 20 meters high without any support of girders or beams, showcasing the engineering genius of the era.</p>
+                <p>The interior is adorned with intricate carvings, beautiful frescoes, and elaborate stucco work that depict scenes from Hindu mythology and the life of the king. The use of light and space creates a dramatic visual impact, especially in the main courtyard.</p>
+                
+                <h2>Historical Significance</h2>
+                <p>Thirumalai Nayakkar Palace was built to serve as the royal residence of King Thirumalai Nayak, who ruled Madurai from 1623 to 1659. The king was a great patron of art and architecture, and his reign is considered the golden period of Madurai's history. The palace was designed by an Italian architect and reflects the global connections of the Nayak rulers.</p>
+                <p>After the decline of the Nayak dynasty, the palace fell into disrepair and was largely dismantled. In the 19th century, Lord Napier, the Governor of Madras, initiated restoration work that saved the remaining structure from complete ruin. Today, the palace is maintained by the Tamil Nadu Archaeological Department and is a protected monument.</p>
+                
+                <h2>Visitor Information</h2>
+                <p>The palace is open to visitors from 9:00 AM to 5:00 PM daily. The best time to visit is during the morning hours when the sunlight illuminates the magnificent pillars and arches. The palace offers a sound and light show in the evenings (in both Tamil and English) that narrates the history of the Nayak dynasty and the story of the palace.</p>
+                <p>Entry fees are nominal, with separate charges for photography. Guided tours are available and highly recommended to fully appreciate the historical and architectural significance. The palace is wheelchair accessible, and basic facilities are available for visitors.</p>
+                <p>Visitors should also explore the palace museum which displays artifacts from the Nayak period, including sculptures, photographs, and historical documents that provide insights into the glorious past of the Madurai kingdom.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/madurai/count yard.jpeg" alt="Palace Courtyard">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/madurai/Thirumalai Nayakkar Palace Massive Pillars.jpg" alt="Massive Pillars">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/madurai/thirumalai-nayakkar-Palace Dome.jpg" alt="Palace Dome">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/madurai/thirumalai-nayak-palaceArchitectural Details.jpg" alt="Architectural Details">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Heritage of Tamil Nadu</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./madurai.html">Back to Madurai</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>

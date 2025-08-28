@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doddabetta Peak - Highest Point in the Nilgiris</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2a5b9b 0%, #56cc54 52%, #ceed53 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2a5b9b;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #2a5b9b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2a5b9b;
+            border-bottom: 2px solid #56cc54;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(42, 91, 155, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #2a5b9b;
+        }
+        
+        .info-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Activities Section */
+        .activities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .activity-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .activity-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #2a5b9b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #56cc54;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+               Tamil Nadu Tourism
+            </div>
+            <a href="./ooty.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Ooty
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Doddabetta Peak - Summit of the Nilgiris</h1>
+            <p>The highest point in the Nilgiri Mountains, offering breathtaking panoramic views of the valley below</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="../images/tamilnadu/ooty/doddabetta-panorama.jpg" alt="Panoramic view from Doddabetta Peak">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Doddabetta Peak</h2>
+                <p>Doddabetta Peak is the highest mountain in the Nilgiri Mountains, standing tall at an elevation of 2,637 meters (8,652 feet) above sea level. Located just 10 km from Ooty (Udhagamandalam), the peak offers spectacular 360-degree panoramic views of the entire Nilgiri biosphere and beyond.</p>
+                <p>The name "Doddabetta" means "Big Mountain" in the local Kannada language. The peak is surrounded by dense shola forests and is home to diverse flora and fauna, including several endemic and endangered species. On clear days, the viewing gallery at the summit offers breathtaking vistas of the Catherine Falls, distant plains of Coimbatore, and even the Mysore Plateau.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-mountain"></i> Elevation</h3>
+                        <p>2,637 meters (8,652 feet)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>10 km from Ooty, Nilgiri District</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-hiking"></i> Trek Difficulty</h3>
+                        <p>Moderate to Difficult</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-tree"></i> Forest Type</h3>
+                        <p>Shola Forest Ecosystem</p>
+                    </div>
+                </div>
+                
+                <h2>History and Significance</h2>
+                <p>Doddabetta Peak has been a significant landmark for centuries, serving as a natural boundary between different regions. During British colonial rule, the peak was a popular hiking destination for officials seeking respite from the summer heat of the plains.</p>
+                <p>The Tamil Nadu Government developed the peak as a tourist attraction in the 1980s, constructing a telescope house at the summit to enhance the viewing experience. The peak is part of the Mukurthi National Park and falls within the Nilgiri Biosphere Reserve, recognized by UNESCO as a World Network of Biosphere Reserves.</p>
+                
+                <h2>Activities and Experiences</h2>
+                <p>Doddabetta Peak offers various experiences for nature lovers and adventure enthusiasts:</p>
+                
+                <div class="activities">
+                    <div class="activity-card">
+                        <h3><i class="fas fa-binoculars"></i> Sightseeing</h3>
+                        <p>The telescope house at the summit provides telescopic views of the surrounding landscape, including Ooty town, tea plantations, and distant waterfalls.</p>
+                    </div>
+                    <div class="activity-card">
+                        <h3><i class="fas fa-hiking"></i> Trekking</h3>
+                        <p>Several trekking trails of varying difficulty lead to the peak, offering opportunities to experience the unique shola-grassland ecosystem.</p>
+                    </div>
+                    <div class="activity-card">
+                        <h3><i class="fas fa-camera"></i> Photography</h3>
+                        <p>The peak offers exceptional photographic opportunities, especially during sunrise and sunset when the mist-covered valleys create magical scenes.</p>
+                    </div>
+                    <div class="activity-card">
+                        <h3><i class="fas fa-leaf"></i> Nature Observation</h3>
+                        <p>The area is rich in biodiversity, with opportunities to spot rare birds, butterflies, and unique high-altitude plant species.</p>
+                    </div>
+                </div>
+                
+                <h2>Visitor Information</h2>
+                <p>Doddabetta Peak is open from 8:00 AM to 5:00 PM every day. The best time to visit is between October and May when visibility is at its best. Early morning visits offer the clearest views before clouds settle in during the afternoon.</p>
+                <p>There is a nominal entry fee for the telescope house. The road to the peak is well-maintained but has several sharp bends. Visitors can reach the summit by private vehicles or taxis from Ooty. The last stretch requires a short walk from the parking area.</p>
+                <p>Due to the high altitude, temperatures can be significantly cooler than in Ooty town, so visitors are advised to carry warm clothing. Basic facilities like restrooms and small tea stalls are available near the parking area.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/ooty/doddabetta-view.jpg" alt="Spectacular view from Doddabetta Peak">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/ooty/doddabetta-telescope.jpg" alt="Telescope house at Doddabetta">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/ooty/doddabetta-flora.jpg" alt="Unique flora around Doddabetta">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/ooty/doddabetta-sunrise.jpg" alt="Sunrise view from Doddabetta Peak">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Natural Wonders of Tamil Nadu</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./ooty.html">Back to Ooty</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item, .activity-card');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>

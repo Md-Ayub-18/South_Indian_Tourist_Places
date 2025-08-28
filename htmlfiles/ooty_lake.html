@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ooty Lake - Picturesque Lake in the Hills</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2a5b9b 0%, #56cc54 52%, #ceed53 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2a5b9b;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #2a5b9b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2a5b9b;
+            border-bottom: 2px solid #56cc54;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(42, 91, 155, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #2a5b9b;
+        }
+        
+        .info-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Activities Section */
+        .activities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .activity-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .activity-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #2a5b9b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #56cc54;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+               Tamil Nadu Tourism
+            </div>
+            <a href="./ooty.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Ooty
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Ooty Lake - Serene Waters in the Hills</h1>
+            <p>A beautiful artificial lake offering boating, leisure activities, and stunning views of the Nilgiri Hills</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="../images/tamilnadu/ooty/ooty-lake-panorama.jpg" alt="Panoramic view of Ooty Lake">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Ooty Lake</h2>
+                <p>Ooty Lake is a beautiful artificial lake located in the heart of Ooty (Udhagamandalam) in the Nilgiri District of Tamil Nadu. Originally constructed in 1824 by John Sullivan, the then Collector of Coimbatore, the lake was created by damming the mountain streams flowing through the Ooty valley to provide irrigation water to the lower regions.</p>
+                <p>Spanning an area of 65 acres, the lake has become one of the most popular tourist attractions in Ooty, offering boating facilities, picturesque surroundings, and a peaceful environment away from the bustling town center. The lake is surrounded by eucalyptus trees and lush greenery, creating a perfect setting for relaxation and recreation.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-calendar-alt"></i> Created</h3>
+                        <p>1824</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>Heart of Ooty, Nilgiri District</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-ruler-combined"></i> Area</h3>
+                        <p>65 acres</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-water"></i> Lake Type</h3>
+                        <p>Artificial Lake</p>
+                    </div>
+                </div>
+                
+                <h2>History</h2>
+                <p>Ooty Lake has a fascinating history dating back to the early 19th century during British colonial rule. John Sullivan, the founder of Ooty, identified the need for a water source for irrigation and decided to create an artificial lake by damming the mountain streams. The lake was initially much larger than its current size and was used for fishing and water supply.</p>
+                <p>In the early years, the lake was also used for hosting boat races and other water sports events for the British officials and settlers. Over time, as Ooty developed into a popular hill station, the lake became a central recreational spot for both locals and tourists. The Tamil Nadu Tourism Development Corporation now maintains the lake and its boating facilities.</p>
+                
+                <h2>Activities and Attractions</h2>
+                <p>Ooty Lake offers various recreational activities for visitors of all ages:</p>
+                
+                <div class="activities">
+                    <div class="activity-card">
+                        <h3><i class="fas fa-ship"></i> Boating</h3>
+                        <p>The main attraction at Ooty Lake is boating. Visitors can choose from paddle boats, row boats, and motor boats. The boat house offers different types of boats to suit preferences and group sizes.</p>
+                    </div>
+                    <div class="activity-card">
+                        <h3><i class="fas fa-camera"></i> Photography</h3>
+                        <p>The lake offers stunning photographic opportunities with its serene waters set against the backdrop of rolling hills and lush greenery, especially during sunrise and sunset.</p>
+                    </div>
+                    <div class="activity-card">
+                        <h3><i class="fas fa-utensils"></i> Lakeside Eating</h3>
+                        <p>Several food stalls and small restaurants around the lake serve local snacks, hot beverages, and quick bites, allowing visitors to enjoy the view while dining.</p>
+                    </div>
+                    <div class="activity-card">
+                        <h3><i class="fas fa-shopping-cart"></i> Shopping</h3>
+                        <p>A small market near the lake sells souvenirs, handmade chocolates (for which Ooty is famous), and local handicrafts, making it perfect for picking up mementos.</p>
+                    </div>
+                </div>
+                
+                <h2>Visitor Information</h2>
+                <p>Ooty Lake is open from 9:00 AM to 6:00 PM every day. The best time to visit is between October and June when the weather is pleasant. Morning hours are less crowded and offer the best views with mist-covered waters.</p>
+                <p>Entry fees are nominal, with separate charges for boating. The lake has well-maintained pathways suitable for walking and cycling. Basic amenities like restrooms, drinking water, and seating areas are available around the lake.</p>
+                <p>Visitors should allocate 1-2 hours to enjoy the lake fully. The adjacent children's park and mini-train ride make it a family-friendly destination. During peak season (April-May), the lake can get crowded, so visiting on weekdays is recommended for a more peaceful experience.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/ooty/lake-boating.jpg" alt="Boating in Ooty Lake">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/ooty/lake-sunset.jpg" alt="Sunset at Ooty Lake">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/ooty/lake-surroundings.jpg" alt="Scenic surroundings of the lake">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/ooty/lake-activities.jpg" alt="Activities around Ooty Lake">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Natural Wonders of Tamil Nadu</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./ooty.html">Back to Ooty</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item, .activity-card');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>

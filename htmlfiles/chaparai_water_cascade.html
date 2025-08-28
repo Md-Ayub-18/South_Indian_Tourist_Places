@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaparai Water Cascade - Araku's Natural Slides</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2a5b9b 0%, #56cc54 52%, #ceed53 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2a5b9b;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #2a5b9b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2a5b9b;
+            border-bottom: 2px solid #56cc54;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(42, 91, 155, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #2a5b9b;
+        }
+        
+        .info-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #2a5b9b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #56cc54;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+                Araku Valley Tourism
+            </div>
+            <a href="./araku.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Araku Valley
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Chaparai Water Cascade - Nature's Water Slides</h1>
+            <p>A beautiful natural water cascade with smooth rock formations perfect for sliding</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="../images/andhra/araku/chaparai_waterfalls_main.jpg" alt="Chaparai Water Cascade">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Chaparai Water Cascade</h2>
+                <p>Chaparai Water Cascade, also known as Chaparai Falls, is a stunning natural attraction located near Araku Valley in the Visakhapatnam district of Andhra Pradesh. This unique cascade features smooth rock formations that create natural water slides and pools, making it a popular picnic and recreation spot for both locals and tourists.</p>
+                <p>The name "Chaparai" is derived from the local tribal language, where "Chapa" means sliding and "Rai" means rocks. The water flows over these smooth rock surfaces, creating perfect natural slides that visitors can enjoy. The surrounding lush green forests and the sound of flowing water create a serene and refreshing atmosphere.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>Near Araku Valley, Andhra Pradesh</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-road"></i> Distance from Araku</h3>
+                        <p>Approximately 10 km</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-water"></i> Water Source</h3>
+                        <p>Mountain springs from Eastern Ghats</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-star"></i> Unique Feature</h3>
+                        <p>Natural rock water slides</p>
+                    </div>
+                </div>
+                
+                <h2>Natural Formation and Features</h2>
+                <p>Chaparai Water Cascade is formed by mountain streams flowing over smooth granite rocks that have been polished by centuries of water flow. These rocks form natural slides of varying lengths and inclines, allowing visitors to slide down into the cool, refreshing pools below.</p>
+                <p>The main cascade stretches over a wide area with multiple tiers and pools. The water is generally clear and shallow, making it safe for children and adults alike to enjoy. The surrounding area is rich in biodiversity, with various species of birds, butterflies, and small mammals inhabiting the forests.</p>
+                
+                <h2>Visitor Experience</h2>
+                <p>Visitors to Chaparai can enjoy sliding down the natural rock formations into the pools below, swimming in the clear water, or simply relaxing on the rocks while enjoying the beautiful surroundings. The site is particularly popular during the summer months when the water provides a refreshing escape from the heat.</p>
+                <p>The area around the cascade has basic facilities like changing rooms and small eateries serving local snacks. The best time to visit is between October and June when the water flow is moderate and the weather is pleasant. During monsoon season (July-September), the water flow can be strong and the rocks slippery, requiring extra caution.</p>
+                
+                <h2>How to Reach</h2>
+                <p>Chaparai Water Cascade is located about 10 km from Araku Valley town center. It is easily accessible by road, with regular auto-rickshaws and taxis available from Araku. The journey offers beautiful views of the Eastern Ghats, coffee plantations, and tribal villages.</p>
+                <p>From Visakhapatnam, Chaparai is approximately 70 km away. Visitors can take a train to Araku Valley (known for its scenic railway journey) and then hire local transportation to reach the cascade.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="../images/andhra/araku/chaparai_slides.jpg" alt="Natural Rock Slides">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/andhra/araku/chaparai_pools.jpg" alt="Natural Pools">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/andhra/araku/chaparai_visitors.jpg" alt="Visitors Enjoying the Water">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/andhra/araku/chaparai_surroundings.jpg" alt="Surrounding Forest">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Natural Wonders of Araku Valley</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./araku_valley.html">Back to Araku Valley</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>

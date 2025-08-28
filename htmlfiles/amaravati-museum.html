@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amaravati Museum - Preserving Ancient Heritage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2a5b9b 0%, #56cc54 52%, #ceed53 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2a5b9b;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #2a5b9b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2a5b9b;
+            border-bottom: 2px solid #56cc54;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(42, 91, 155, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #2a5b9b;
+        }
+        
+        .info-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover extreme {
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #2a5b9b;
+            text-decoration: none;
+            transition: color 0.3s extreme;
+        }
+        
+        .footer-links a:hover {
+            color: #56cc54;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+                Amaravati Tourism
+            </div>
+            <a href="./amaravati.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Amaravati
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Amaravati Museum - Preserving Ancient Heritage</h1>
+            <p>A treasure trove of Buddhist artifacts and sculptures from the ancient Amaravati school of art</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="../images/andhra-pradesh/amaravati/amaravati-museum.jpg" alt="Amaravati Museum">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Amaravati Museum</h2>
+                <p>The Amaravati Museum is an archaeological museum located in Amaravati, Andhra Pradesh, dedicated to preserving and showcasing the rich cultural heritage of the ancient Amaravati Buddhist site. The museum houses an exceptional collection of Buddhist sculptures, relics, and artifacts that date back to the 3rd century BCE to the 12th century CE.</p>
+                <p>Established in 1973, the museum is maintained by the Archaeological Survey of India and serves as an important center for understanding the Amaravati school of art, which flourished under the Satavahana dynasty. The museum's collection primarily consists of marble sculptures, inscriptions, and architectural fragments from the famous Amaravati Stupa, one of the most important Buddhist monuments in India.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-history"></i> Established</h3>
+                        <p>1973 by Archaeological Survey of India</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-building"></i> Museum Type</h3>
+                        <p>Archaeological Museum</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>Amaravati, Andhra Pradesh</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-clock"></i> Visiting Hours</h3>
+                        <p>9:00 AM to 5:00 PM (Closed on Fridays)</p>
+                    </div>
+                </div>
+                
+                <h2>Collections and Exhibits</h2>
+                <p>The Amaravati Museum boasts an impressive collection of artifacts that provide insights into the Buddhist art and culture of ancient India. The main attractions include beautifully carved marble panels from the Amaravati Stupa depicting scenes from the life of Buddha, Jataka tales, and various Buddhist symbols. The museum also houses a large collection of inscriptions in Prakrit language that provide valuable historical information.</p>
+                <p>Among the notable exhibits is the magnificent lotus medallion, various friezes showing worship scenes, and sculptures of Buddha in different postures. The museum also displays coins, pottery, and other archaeological finds from excavation sites in and around Amaravati. The collection represents the peak of the Amaravati school of art, known for its narrative style, delicate carvings, and spiritual themes.</p>
+                
+                <h2>Historical Significance</h2>
+                <p>The Amaravati Museum holds immense historical significance as it preserves the remains of one of the most important Buddhist centers in ancient India. The Amaravati Stupa was originally built during the reign of Emperor Ashoka in the 3rd century BCE and was expanded over several centuries. The artifacts in the museum provide crucial evidence of the spread of Buddhism in South India and its influence on art and culture.</p>
+                <p>The museum's collection helps scholars understand the evolution of Buddhist art from the early Aniconic phase (where Buddha was represented through symbols) to the later Iconic phase (with human representations). The inscriptions found on many artifacts provide valuable information about the patrons, artists, and social conditions of the time, making the museum an important resource for historical research.</p>
+                
+                <h2>Visitor Information</h2>
+                <p>The Amaravati Museum is open from 9:00 AM to 5:00 PM on all days except Fridays and national holidays. There is a nominal entry fee for visitors, with discounts for students and children. Photography is allowed in most areas, but flash photography may be restricted in certain sections to preserve the artifacts.</p>
+                <p>Guided tours are available and highly recommended to fully appreciate the historical significance of the exhibits. The museum has basic facilities including restrooms and a small souvenir shop. The best time to visit is between October and March when the weather is pleasant. Visitors should plan to spend at least 2-3 hours to explore the museum thoroughly.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="../images/andhra-pradesh/amaravati/museum-exhibits.jpg" alt="Museum Exhibits">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/andhra-pradesh/amaravati/buddha-sculptures.jpg" alt="Buddha Sculptures">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/andhra-pradesh/amaravati/amaravati-artifacts.jpg" alt="Ancient Artifacts">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/andhra-pradesh/amaravati/museum-building.jpg" alt="Museum Building">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Cultural Heritage of Amaravati</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./amaravati.html">Back to Amaravati</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Plantations of Araku Valley - Scenic Beauty</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #3e6a3e 0%, #8bc34a 52%, #c5e1a5 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #3e6a3e;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #3e6a3e;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #8bc34a;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #3e6a3e;
+            border-bottom: 2px solid #8bc34a;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(62, 106, 62, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #3e6a3e;
+        }
+        
+        .info-card h3 {
+            color: #3e6a3e;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #3e6a3e;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #8bc34a;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+                Araku Valley Tourism
+            </div>
+            <a href="./araku.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Araku Valley
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Coffee Plantations of Araku Valley - Aromatic Paradise</h1>
+            <p>Experience the lush green coffee estates nestled in the Eastern Ghats</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="../images/andhra/araku_valley/coffee_plantations_main.jpg" alt="Coffee Plantations of Araku Valley">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Araku Valley Coffee Plantations</h2>
+                <p>The Coffee Plantations of Araku Valley are spread across the picturesque Eastern Ghats in Andhra Pradesh. Known for producing some of India's finest organic coffee, these plantations offer a serene escape into nature. The valley's unique microclimate, with elevations ranging from 900 to 1,100 meters above sea level, provides perfect conditions for growing high-quality Arabica and Robusta coffee varieties.</p>
+                <p>The Araku Valley coffee has gained international recognition for its distinctive flavor profile, characterized by notes of chocolate, spice, and citrus. The tribal communities of the region have been cultivating coffee using traditional organic methods for generations, creating a sustainable agricultural model that benefits both the environment and the local economy.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-seedling"></i> Coffee Varieties</h3>
+                        <p>Arabica, Robusta, and unique local blends</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-mountain"></i> Elevation</h3>
+                        <p>900-1,100 meters above sea level</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-certificate"></i> Certification</h3>
+                        <p>100% Organic and Fair Trade</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>Araku Valley, Andhra Pradesh</p>
+                    </div>
+                </div>
+                
+                <h2>The Coffee Cultivation Process</h2>
+                <p>Coffee cultivation in Araku Valley follows traditional organic farming practices. The coffee plants are grown under the shade of silver oak and other native trees, which helps maintain soil fertility and provides habitat for local wildlife. The entire process from planting to harvesting is done manually by skilled tribal farmers who have inherited this knowledge through generations.</p>
+                <p>The harvest season typically runs from November to February, when the ripe red coffee cherries are carefully hand-picked. The beans are then processed using either the wet or dry method, depending on the desired flavor profile. The processed beans are sun-dried on large concrete patios before being sorted and sent for roasting.</p>
+                
+                <h2>Visitor Experience</h2>
+                <p>Visitors to the Araku Valley coffee plantations can enjoy guided tours that explain the entire coffee-making process from bean to cup. Many plantations offer coffee tasting sessions where you can sample different varieties and learn to appreciate the subtle flavor notes. The plantations also provide opportunities to interact with local tribal communities and understand their sustainable way of life.</p>
+                <p>Popular activities include walking through the lush coffee estates, bird watching, photography, and participating in coffee picking during the harvest season. Several plantations have cafes where you can enjoy freshly brewed coffee while taking in the breathtaking views of the valley.</p>
+                
+                <h2>Best Time to Visit</h2>
+                <p>The best time to visit the coffee plantations is between October and March when the weather is pleasant. The monsoon season (June to September) transforms the valley into a lush green paradise, but travel might be challenging due to rainfall. The harvest season (November to February) is particularly interesting as you can witness the coffee picking and processing activities.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="../images/andhra/araku_valley/coffee_plants_closeup.jpg" alt="Coffee Plants">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/andhra/araku_valley/coffee_harvesting.jpg" alt="Coffee Harvesting">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/andhra/araku_valley/coffee_processing.jpg" alt="Coffee Processing">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/andhra/araku_valley/plantation_view.jpg" alt="Plantation View">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Natural Beauty of Araku Valley</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./araku_valley.html">Back to Araku Valley</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>

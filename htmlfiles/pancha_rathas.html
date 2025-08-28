@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pancha Rathas - Mahabalipuram's Monolithic Marvels</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2a5b9b 0%, #56cc54 52%, #ceed53 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2a5b9b;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #2a5b9b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2a5b9b;
+            border-bottom: 2px solid #56cc54;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(42, 91, 155, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #2a5b9b;
+        }
+        
+        .info-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: #2a5b9b;
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #2a5b9b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #56cc54;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+                Tamil Nadu Tourism
+            </div>
+            <a href="./Mahabalipuram.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Mahabalipuram
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Pancha Rathas - Architectural Brilliance</h1>
+            <p>Five magnificent monolithic rock-cut temples shaped as chariots</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="../images/tamilnadu/mahabalipuram/pandav-ratha-1.jpg" alt="Pancha Rathas">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Pancha Rathas</h2>
+                <p>Pancha Rathas (also known as Five Rathas or Pandava Rathas) is a monument complex at Mahabalipuram, featuring five magnificent monolithic rock-cut structures. These structures are carved in the shape of chariots (rathas) and are among the oldest rock-cut structures in India, dating back to the 7th century during the reign of King Mahendravarman I and his son Narasimhavarman I of the Pallava dynasty.</p>
+                <p>Each of the five rathas is carved from a single large piece of stone and is dedicated to a different Hindu deity. Despite their names being derived from the Pandavas of the Mahabharata epic, the temples are not actually connected to them and were never completed or consecrated for worship.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-calendar-alt"></i> Built In</h3>
+                        <p>7th century AD (630–668 AD)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>Mahabalipuram, Tamil Nadu, India</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-archway"></i> Architectural Style</h3>
+                        <p>Dravidian Architecture</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-landmark"></i> UNESCO Status</h3>
+                        <p>World Heritage Site since 1984</p>
+                    </div>
+                </div>
+                
+                <h2>The Five Rathas</h2>
+                <p>The complex consists of five chariot-shaped temples, each with its own unique architectural style:</p>
+                <p><strong>1. Dharmaraja Ratha:</strong> The largest and most ornate, dedicated to Lord Shiva. It features a three-story structure with intricate carvings of deities.</p>
+                <p><strong>2. Bhima Ratha:</strong> Rectangular in shape with a barrel-vaulted roof, dedicated to Vishnu.</p>
+                <p><strong>3. Arjuna Ratha:</strong> Similar to the Dharmaraja Ratha but smaller, dedicated to Shiva.</p>
+                <p><strong>4. Nakula Sahadeva Ratha:</strong> Dedicated to Indra, featuring an elephant sculpture beside it.</p>
+                <p><strong>5. Draupadi Ratha:</strong> The smallest, dedicated to Durga, shaped like a hut with a thatched roof.</p>
+                
+                <h2>Architectural Significance</h2>
+                <p>The Pancha Rathas represent a unique experiment in Indian architecture, showcasing the transition from rock-cut architecture to structural stone buildings. Each ratha demonstrates a different style of South Indian temple architecture, providing a catalog of design elements that would later influence temple construction throughout the region.</p>
+                <p>The monuments are carved from a single rock formation, with the sculptors working from top to bottom—a technique characteristic of Pallava architecture. The intricate carvings depict various Hindu deities, mythological scenes, and everyday life from the Pallava period.</p>
+                
+                <h2>Visitor Information</h2>
+                <p>The Pancha Rathas complex is open daily from 6:00 AM to 6:00 PM. The best time to visit is during the early morning or late afternoon when the sunlight enhances the beauty of the stone carvings. The winter months (October to March) offer the most pleasant weather for exploration.</p>
+                <p>Entry fees apply for both domestic and international tourists. Guided tours are available and highly recommended to fully appreciate the historical and architectural significance of these magnificent structures. Photography is permitted, but the use of tripods may require special permission.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/mahabalipuram/Pancha Rathas Detailed View.jpeg" alt="Pancha Rathas Detailed View">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/mahabalipuram/Intricate Carvings pandav.jpg" alt="Intricate Carvings">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/mahabalipuram/Stone Elephant Sculpture.jpeg" alt="Stone Elephant Sculpture">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/mahabalipuram/Pancha Rathas Architectural Details.jpg" alt="Architectural Details">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Heritage of Tamil Nadu</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./Mahabalipuram.html">Back to Mahabalipuram</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>

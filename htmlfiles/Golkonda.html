@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golconda Fort - Majestic Fortress of Hyderabad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2a5b9b 0%, #56cc54 52%, #ceed53 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2a5b9b;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #2a5b9b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2a5b9b;
+            border-bottom: 2px solid #56cc54;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(42, 91, 155, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #2a5b9b;
+        }
+        
+        .info-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: #2a5b9b;
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #2a5b9b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #56cc54;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+                Hyderabad Tourism
+            </div>
+            <a href="hyderabad.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Hyderabad Cities
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Golconda Fort - Majestic Fortress of Hyderabad</h1>
+            <p>The magnificent fort that once housed the legendary Koh-i-Noor diamond and other priceless gems</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="../images/telangana/hyderabad/Golcondaarch.jpg" alt="Golconda Fort">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Golconda Fort</h2>
+                <p>Golconda Fort is a massive fortress whose ruins stand proudly even today, showcasing the glory of its rich past and the heritage of the Qutub Shahi dynasty. Originally known as Mankal, the fort was built on a granite hill in the 13th century by the Kakatiya dynasty.</p>
+                <p>The fort was later strengthened and made into a magnificent structure by the Qutub Shahi kings who ruled from here for about 62 years. Golconda was famous for its diamond trade, and the world-renowned Koh-i-Noor diamond is said to have come from here.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-calendar-alt"></i> Built In</h3>
+                        <p>13th Century (Original structure)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-ruler-combined"></i> Area</h3>
+                        <p>11 km circumference</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-archway"></i> Architectural Style</h3>
+                        <p>Hindu-Muslim architecture</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>Western Hyderabad, Telangana</p>
+                    </div>
+                </div>
+                
+                <h2>Architectural Marvel</h2>
+                <p>Golconda Fort is renowned for its military architecture and ingenious engineering. The fort has eight gates and87 bastions, each about 18 meters high. The outermost enclosure is called Fateh Darwaza (Victory Gate), where you can experience the fantastic acoustic effects - a hand clap at the entrance can be heard clearly at the highest point of the pavilion, almost a kilometer away.</p>
+                <p>The fort complex contains palaces, temples, mosques, and other structures that showcase the architectural brilliance of the bygone era. The royal palaces and the famous Taramati Mosque are fine examples of Indo-Islamic architecture.</p>
+                
+                <h2>Diamond Trade History</h2>
+                <p>Golconda was once the market city of the diamond trade, and jewels including the Koh-i-Noor, Hope Diamond, and the Nassak Diamond were excavated from the mines in this region. The fort was the center of a thriving diamond industry, and the name "Golconda" became synonymous with great wealth.</p>
+                
+                <h2>Visitor Information</h2>
+                <p>Golconda Fort is open to visitors every day from 9:00 AM to 5:30 PM. The sound and light show in the evening is a major attraction that brings the history of the fort to life. The best time to visit is during the winter months from October to March when the weather is pleasant for exploring the vast complex.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="../images/telangana/hyderabad/golkondaview.jpeg"alt="Golconda Fort View">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/telangana/hyderabad/The fort Golkonda.jpeg" alt="Golconda Fort Architecture">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/telangana/hyderabad/golkondanyt.jpg" alt="Golconda Fort Palaces">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/telangana/hyderabad/golkondavv.jpg" alt="Golconda Fort Night View">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Beauty of Hyderabad</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html"> Go To Home</a>
+                    <a href="./hyderabad.html">Go To Hyderabad</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>
