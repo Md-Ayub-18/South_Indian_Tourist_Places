@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virupaksha Temple - Hampi's Ancient Abode</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2a5b9b 0%, #56cc54 52%, #ceed53 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2a5b9b;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #2a5b9b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2a5b9b;
+            border-bottom: 2px solid #56cc54;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(42, 91, 155, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #2a5b9b;
+        }
+        
+        .info-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #2a5b9b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #56cc54;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+                Hampi Tourism
+            </div>
+            <a href="./hampi.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Hampi
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Virupaksha Temple - Hampi's Ancient Abode</h1>
+            <p>A magnificent 7th-century temple dedicated to Lord Shiva and the center of Hampi's spiritual life</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="../images/karnataka/hampi/virupaksha-temple.jpg" alt="Virupaksha Temple">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Virupaksha Temple</h2>
+                <p>The Virupaksha Temple is the most famous and sacred temple in Hampi, dedicated to Lord Shiva as Virupaksha, the consort of the local goddess Pampa who is associated with the Tungabhadra River. This ancient temple has been functioning continuously ever since it was built in the 7th century AD, making it one of the oldest functioning temples in India.</p>
+                <p>The temple is part of the Group of Monuments at Hampi, designated as a UNESCO World Heritage Site. It was greatly expanded during the Vijayanagara Empire, with Krishnadevaraya being one of its most prominent patrons. The temple complex serves as the center of Hampi's religious and cultural activities even today.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-history"></i> Built In</h3>
+                        <p>7th century AD (expanded in 14th century)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-archway"></i> Architectural Style</h3>
+                        <p>Dravidian architecture</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-ruler-vertical"></i> Gopuram Height</h3>
+                        <p>50 meters (160 ft)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>Hampi, Karnataka, India</p>
+                    </div>
+                </div>
+                
+                <h2>Architectural Marvel</h2>
+                <p>The Virupaksha Temple complex showcases the exquisite Vijayanagara architectural style. The main temple is surrounded by numerous smaller shrines, pillared halls, and entrance gateways. The most striking feature is the nine-tiered eastern gateway (gopuram) that rises to about 50 meters, providing a magnificent sight against Hampi's boulder-strewn landscape.</p>
+                <p>The temple complex includes several notable structures: the main shrine dedicated to Virupaksha, the shrines of Bhuvaneshwari and Pampa, the 100-pillar hall, the temple kitchen, and the administrative buildings. The intricate carvings on the pillars and walls depict various mythological scenes, dancers, musicians, and aspects of daily life during the Vijayanagara period.</p>
+                
+                <h2>Historical Significance</h2>
+                <p>The Virupaksha Temple has a history spanning more than 1,300 years. Originally a small shrine, it grew into a large complex under the patronage of the Vijayanagara rulers who regarded Lord Virupaksha as their family deity. The temple survived the destruction of Hampi in 1565 and continued to be an important pilgrimage center.</p>
+                <p>Inscriptions in the temple date back to the 9th and 10th centuries, showing the temple's significance long before the Vijayanagara Empire. The temple's historical importance is further enhanced by its mention in various ancient texts and its association with saints like Vidyaranya who helped establish the Vijayanagara Empire.</p>
+                
+                <h2>Religious Significance</h2>
+                <p>The Virupaksha Temple is one of the most important Shiva temples in South India and attracts thousands of pilgrims annually. The temple is particularly famous for its annual chariot festival in February, which draws devotees from across the country. The temple also celebrates the marriage ceremony of Lord Virupaksha and Goddess Pampa with great splendor.</p>
+                <p>The temple houses a unique natural phenomenon - a pinhole camera effect in its dark chamber where an inverted image of the main gopuram is projected through a small opening. This is considered a marvel of ancient Indian architecture and adds to the temple's spiritual significance.</p>
+                
+                <h2>Visitor Information</h2>
+                <p>The temple is open from 9:00 AM to 1:00 PM and from 5:00 PM to 9:00 PM. The best time to visit is during the early morning or evening aarti (worship ceremony) to experience the spiritual atmosphere. Visitors are required to follow the temple dress code (traditional attire preferred) and remove footwear before entering the main shrine.</p>
+                <p>Entry fees are nominal, with additional charges for photography. Guided tours are available that explain the temple's history and architecture. The temple is wheelchair accessible to most areas, and facilities like drinking water and restrooms are available within the complex.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="../images/karnataka/hampi/virupaksha-gopuram.jpg" alt="Virupaksha Temple Gopuram">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/karnataka/hampi/virupaksha-main-shrine.jpg" alt="Main Shrine">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/karnataka/hampi/virupaksha-pillars.jpg" alt="Intricate Pillars">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/karnataka/hampi/virupaksha-courtyard.jpg" alt="Temple Courtyard">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Ancient Heritage of Hampi</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./hampi.html">Back to Hampi</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>

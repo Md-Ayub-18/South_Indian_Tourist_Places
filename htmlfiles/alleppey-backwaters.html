@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backwaters of Kerala - Serene Waterworld</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2a5b9b 0%, #56cc54 52%, #ceed53 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2a5b9b;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #2a5b9b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2a5b9b;
+            border-bottom: 2px solid #56cc54;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(42, 91, 155, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #2a5b9b;
+        }
+        
+        .info-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #2a5b9b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #56cc54;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+                Alleppey Tourism
+            </div>
+            <a href="./alleppey.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Alleppey
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Backwaters of Kerala - Serene Waterworld</h1>
+            <p>A network of interconnected canals, rivers, lakes, and inlets forming a breathtaking aquatic landscape</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="../images/kerala/backwaters/backwaters-panoramic.jpg" alt="Kerala Backwaters">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Kerala Backwaters</h2>
+                <p>The Kerala backwaters are a chain of brackish lagoons and lakes lying parallel to the Arabian Sea coast. This unique network includes five large lakes linked by canals, both man-made and natural, fed by 38 rivers, and extending virtually half the length of Kerala state.</p>
+                <p>The backwaters were formed by the action of waves and shore currents creating low barrier islands across the mouths of the many rivers flowing down from the Western Ghats range. The backwaters have a unique ecosystem - freshwater from the rivers meets the seawater from the Arabian Sea, creating a rich environment for aquatic life.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-water"></i> Total Length</h3>
+                        <p>Over 900 km of interconnected waterways</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marked-alt"></i> Major Locations</h3>
+                        <p>Alleppey, Kumarakom, Kollam, Kuttanad</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-ship"></i> Famous For</h3>
+                        <p>Houseboat cruises (Kettuvallams)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>Coastal regions of Kerala, India</p>
+                    </div>
+                </div>
+                
+                <h2>Unique Ecosystem</h2>
+                <p>The backwaters host many unique species of aquatic life including crabs, frogs, mudskippers, water birds, and animals such as otters and turtles. The area is also home to many unique species of birds like kingfishers, darters, and cormorants. The fish caught in the backwaters form an important part of the local diet.</p>
+                <p>Today, the backwaters are used for fishing, agriculture, and transportation. The most popular activity for tourists is taking a cruise on the traditional houseboats (kettuvallams) that have been converted into floating hotels with bedrooms, kitchens, and sit-out areas.</p>
+                
+                <h2>Cultural Significance</h2>
+                <p>The backwaters have played a significant role in the lives of Keralites for centuries. They have been the main mode of transportation in earlier days and continue to be used for local transport, especially in areas where road transport is not feasible.</p>
+                <p>The backwater regions are known for their unique lifestyle, with many communities living along the banks of these waterways, depending on them for their livelihood through fishing, agriculture, and coir-making. The annual Nehru Trophy Boat Race held in Punnamada Lake in Alleppey is a major attraction that showcases the traditional snake boat races.</p>
+                
+                <h2>Visitor Information</h2>
+                <p>The best time to visit the backwaters is from September to March when the weather is pleasant. Houseboats can be booked for day trips or overnight stays. Most houseboat journeys start from Alleppey (Alappuzha), which is known as the "Venice of the East."</p>
+                <p>Visitors can also explore the backwaters through public ferries, which offer a more local experience. Don't miss trying the traditional Kerala cuisine served on houseboats, especially the fresh seafood and vegetarian dishes cooked with local spices.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="../images/kerala/backwaters/houseboat-cruise.jpg" alt="Houseboat Cruise">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/kerala/backwaters/backwaters-sunset.jpg" alt="Backwaters Sunset">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/kerala/backwaters/village-life.jpg" alt="Village Life">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/kerala/backwaters/nehrutrophy-race.jpg" alt="Nehru Trophy Boat Race">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Natural Beauty of Kerala</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./kerala.html">Back to Kerala</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brindavan Gardens - Mysore's Magnificent Terraced Gardens</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2a5b9b 0%, #56cc54 52%, #ceed53 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2a5b9b;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #2a5b9b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2a5b9b;
+            border-bottom: 2px solid #56cc54;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(42, 91, 155, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #2a5b9b;
+        }
+        
+        .info-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #2a5b9b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #56cc54;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+                Mysore Tourism
+            </div>
+            <a href="./mysore.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Mysore
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Brindavan Gardens - Mysore's Terraced Wonder</h1>
+            <p>Famous gardens showcasing magnificent musical fountain shows and beautiful landscape design</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="https://images.unsplash.com/photo-1599739716738-ffc3617c5733?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Brindavan Gardens">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Brindavan Gardens</h2>
+                <p>Brindavan Gardens is one of the most beautiful and famous gardens in India, located just 21 kilometers from the city of Mysore. The gardens are laid out below the Krishnarajasagara dam built across the river Cauvery. Spread over 60 acres, these terraced gardens are renowned for their symmetric design, beautiful flower beds, lush green lawns, and spectacular musical fountain shows.</p>
+                <p>The gardens were created by Sir Mirza Ismail, the Dewan of Mysore during the reign of Krishnaraja Wodeyar IV, and were completed in 1932. The design was inspired by the Shalimar Gardens of Kashmir, and they represent a magnificent example of horticultural excellence and garden design that has attracted millions of visitors over the decades.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-calendar-alt"></i> Established</h3>
+                        <p>1932</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-expand-arrows-alt"></i> Area</h3>
+                        <p>60 acres</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-user-tie"></i> Designer</h3>
+                        <p>Sir Mirza Ismail</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>Below Krishnarajasagara Dam, Mysore</p>
+                    </div>
+                </div>
+                
+                <h2>Garden Layout and Design</h2>
+                <p>Brindavan Gardens is laid out in a series of terraces that descend from the dam, with each level offering different horticultural displays and water features. The gardens are divided into several sections including the North Brindavan, South Brindavan, and the main garden area. The design incorporates Italian, Mughal, and Persian gardening styles, creating a unique blend of architectural influences.</p>
+                <p>The gardens feature numerous fountains, ornamental plants, flowering trees, and sculpted hedges arranged in geometric patterns. There are several water channels and pools that reflect the surrounding greenery, creating a serene and picturesque environment. The central attraction is the musical fountain which comes alive with colorful lights and synchronized water movements during the evening shows.</p>
+                
+                <h2>Musical Fountain Show</h2>
+                <p>The musical fountain at Brindavan Gardens is one of the main attractions that draws visitors from all over the world. The fountain features a spectacular display of water, music, and colored lights that are synchronized to create a mesmerizing performance. The show typically includes both Indian classical music and Western melodies, with water jets dancing to the rhythm of the music.</p>
+                <p>The fountain show takes place every evening and has multiple performances. The main show usually lasts for about 30 minutes and features water jets that can reach impressive heights, creating beautiful patterns against the night sky. The combination of music, colored lights, and water movement creates a magical atmosphere that leaves visitors spellbound.</p>
+                
+                <h2>Krishnarajasagara Dam</h2>
+                <p>Brindavan Gardens is built below the Krishnarajasagara Dam (also known as KRS Dam), which is itself a magnificent engineering marvel. The dam was constructed across the river Cauvery in 1924 and was one of the first major irrigation projects in India. The dam is named after Krishnaraja Wodeyar IV, the then Maharaja of Mysore.</p>
+                <p>The dam is approximately 2,621 meters long and 40 meters high, creating a large reservoir that supplies water for irrigation to Mandya and Mysore districts. Visitors can walk along the top of the dam, which offers panoramic views of the reservoir and the surrounding countryside. The dam and gardens together form one of the most popular tourist complexes in South India.</p>
+                
+                <h2>Visitor Information</h2>
+                <p>Brindavan Gardens is open daily from 8:00 AM to 8:00 PM. The musical fountain shows are held in the evening, typically starting after sunset. There are usually two shows - the first show begins around 6:30 PM and the main show around 7:30 PM (timings may vary seasonally).</p>
+                <p>The gardens are located about 21 km from Mysore city and can be reached by bus, taxi, or private vehicle. There is an entrance fee for visitors, with separate charges for the musical fountain show. The best time to visit is between October and March when the weather is pleasant and the gardens are in full bloom. The monsoon season (June-September) also offers lush greenery but some areas might be slippery.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1625472603517-1b0dc72846ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Garden Terraces">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1590065480004-477ef6d4d5de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Musical Fountain">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1579532537593-90d5d2709189?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Garden Pathways">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1516216626528-a5725716bb5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Evening Lights">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Garden City of Mysore</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./mysore.html">Back to Mysore</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>

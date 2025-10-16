@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eravikulam National Park - Kerala's Natural Treasure</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1a472a 0%, #2e8b57 52%, #3cb371 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #1a472a;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #1a472a;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #2e8b57;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #1a472a;
+            border-bottom: 2px solid #2e8b57;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(26, 71, 42, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #1a472a;
+        }
+        
+        .info-card h3 {
+            color: #1a472a;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #1a472a;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #2e8b57;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+                Munnar Tourism
+            </div>
+            <a href="./munnar.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Munnar
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Eravikulam National Park - Sanctuary of the Nilgiri Tahr</h1>
+            <p>A biodiversity hotspot in the Western Ghats and home to the endangered Nilgiri Tahr</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="https://images.unsplash.com/photo-1586374576582-75b4d3c53d2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Eravikulam National Park">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Eravikulam National Park</h2>
+                <p>Eravikulam National Park is a 97 km² national park located along the Western Ghats in the Idukki district of Kerala, India. Situated between 2,000 and 2,600 meters above sea level, it is renowned for its population of the endangered Nilgiri Tahr, the only mountain ungulate in southern India.</p>
+                <p>The park was originally established as a game sanctuary in 1975 to protect the Nilgiri Tahr and was declared a national park in 1978. The name 'Eravikulam' translates to 'stream of blood', possibly referring to the red soil found in the area or the legend of a bloody battle between two tribal chieftains.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-tree"></i> Established</h3>
+                        <p>1978 (as a national park)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-expand-arrows-alt"></i> Area</h3>
+                        <p>97 km² (37 sq mi)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-mountain"></i> Elevation</h3>
+                        <p>2,000 - 2,600 meters</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>Idukki District, Kerala, India</p>
+                    </div>
+                </div>
+                
+                <h2>Biodiversity and Ecology</h2>
+                <p>Eravikulam National Park is characterized by high altitude grasslands and shola forests, which are unique to the Western Ghats. The park is home to the largest population of the endangered Nilgiri Tahr, with estimates suggesting about one-third of the entire species population resides here.</p>
+                <p>The park hosts a rich diversity of flora including numerous endemic species. The famous Neelakurinji (Strobilanthes kunthiana) flowers that bloom once every twelve years cover the hills in a breathtaking blue carpet. The park also supports various mammal species including Indian muntjac, sambar deer, golden jackal, and several endemic birds like the Nilgiri pipit and black-and-orange flycatcher.</p>
+                
+                <h2>Nilgiri Tahr Conservation</h2>
+                <p>The primary purpose of Eravikulam National Park is the conservation of the Nilgiri Tahr (Nilgiritragus hylocrius). This endangered mountain goat species is endemic to the Western Ghats and has experienced significant habitat loss and population decline. The park has implemented successful conservation programs that have helped stabilize and gradually increase the Tahr population.</p>
+                <p>Visitors to the park can observe these magnificent creatures in their natural habitat, particularly during the early morning hours when they are most active. The park management carefully regulates tourism to minimize disturbance to the wildlife while providing educational opportunities for visitors.</p>
+                
+                <h2>Visitor Information</h2>
+                <p>The park is open from 7:45 AM to 4:00 PM, but closed during the monsoon season (usually from February to March for maintenance). Visitors are transported in park buses to the Rajamalai tourism zone, where they can observe wildlife from designated areas. The best time to visit is from September to November and from April to May when weather conditions are favorable for wildlife viewing.</p>
+                <p>All visitors must obtain entry tickets from the counter at the park entrance. Photography is allowed but flash photography and drones are prohibited. Visitors are expected to follow park guidelines, maintain silence, and not feed or disturb the animals.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1593425145966-1d0bd3f50239?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Nilgiri Tahr">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1579039570010-0b1ce308ae4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwa90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Park Landscape">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1579039570007-0c5c86e22fb8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Neelakurinji Flowers">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1579039570016-efd34de60f2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Shola Forests">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Natural Wonders of Kerala</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./kerala.html">Back to Kerala</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="..//cssfiles/styles.css" />
+  </head>
+  <body>
+    <form action="/signup" method="POST">
+      <div class="signup-container">
+        <h1>Create Account</h1>
+
+        <div class="form-group">
+          <label for="first_name">first_name </label>
+          <input
+            type="text"
+            name="first_name"
+            id="first_name"
+            placeholder="Enter your full name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="last_name">last_name</label>
+          <input
+            type="text"
+            id="last_name"
+            name="last_name"
+            placeholder="Enter your full name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="birth_year">birth_year</label>
+          <input type="text" name="birth_year" required />
+        </div>
+        <div class="form-group">
+          <label for="gender">gender </label>
+          <select name="gender">
+           <option> select gender </option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option></select
+          ><br />
+        </div>
+
+        <div class="form-group">
+          <label for="email">email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+          <label for="phone">phone</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="e.g., +1 123-456-7890"
+          />
+        </div>
+
+        <button type="submit">Sign Up</button>
+        <div class="login-link">
+          <p>Already have an account? <a href="./login.html">Log in</a></p>
+        </div>
+        <br />
+        <p>
+          <span>Note:</span> After creating an account, your password will be
+          the combination of your name and the year of birth
+        </p>
+        <img src="./images/passwordex.JPG" alt="example password" />
+        <br />
+      </div>
+    </form>
+  </body>
+</html>

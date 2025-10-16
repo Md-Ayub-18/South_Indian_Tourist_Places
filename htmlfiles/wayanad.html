@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wayanad - The Green Paradise of Kerala</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2a5b9b 0%, #56cc54 52%, #ceed53 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2a5b9b;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #2a5b9b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2a5b9b;
+            border-bottom: 2px solid #56cc54;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(42, 91, 155, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #2a5b9b;
+        }
+        
+        .info-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #2a5b9b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #56cc54;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+                Kerala Tourism
+            </div>
+            <a href="./kerala.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Kerala
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Wayanad - The Green Paradise</h1>
+            <p>Explore the lush green hills, misty mountains, and rich biodiversity of Kerala's nature paradise</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="https://images.unsplash.com/photo-1588416498210-02e19971e5ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Wayanad Landscape">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Wayanad</h2>
+                <p>Wayanad, the green paradise nestled among the mountains of the Western Ghats, forms the borderland of the greener part of Kerala. Located at a distance of about 76 km from the sea shores of Kozhikode, this verdant hill station is full of plantations, forests, and wildlife. The name Wayanad is derived from 'Vayal Nadu' which means the land of paddy fields.</p>
+                <p>With an array of tourist spots including beautiful lakes, dams, waterfalls, and viewpoints, Wayanad is one of the most popular tourist destinations in Kerala. The district is known for its rich tribal heritage and is home to several indigenous communities who have preserved their traditional way of life.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-mountain"></i> Elevation</h3>
+                        <p>700 to 2,100 meters above sea level</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-tree"></i> Forest Cover</h3>
+                        <p>Over 80% of the district is forested</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-cloud-rain"></i> Best Time to Visit</h3>
+                        <p>October to May</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>Northern Kerala, Western Ghats</p>
+                    </div>
+                </div>
+                
+                <h2>Natural Attractions</h2>
+                <p>Wayanad is blessed with an abundance of natural beauty. The Chembra Peak, the highest peak in Wayanad, offers a breathtaking view of the entire district. The Edakkal Caves, with their ancient petroglyphs, provide a glimpse into prehistoric human settlements. The Banasura Sagar Dam, the largest earth dam in India, is set against the backdrop of the Banasura Hills.</p>
+                <p>The district is also home to several beautiful waterfalls including Meenmutty Falls and Soochipara Falls, which are major tourist attractions. The Pookode Lake, a freshwater lake surrounded by forests, offers boating facilities and is a perfect spot for nature lovers.</p>
+                
+                <h2>Wildlife and Biodiversity</h2>
+                <p>Wayanad is part of the Nilgiri Biosphere Reserve and is home to rich flora and fauna. The Wayanad Wildlife Sanctuary, also known as Muthanga Wildlife Sanctuary, is home to elephants, tigers, leopards, and various species of deer. The Tholpetty Wildlife Sanctuary is another important biodiversity hotspot in the region.</p>
+                <p>The district has several coffee, tea, and spice plantations that add to its natural beauty. The region's climate and soil conditions make it ideal for growing a variety of spices including pepper, cardamom, vanilla, and cinnamon.</p>
+                
+                <h2>Cultural Heritage</h2>
+                <p>Wayanad has a rich cultural heritage with a significant tribal population. The indigenous communities including Paniyas, Adiyas, Kattunayakans, and Kurichiyans have preserved their traditional customs, rituals, and art forms. The district hosts several tribal festivals that showcase their unique culture and traditions.</p>
+                <p>The ancient Jain Temple at Sultan Bathery, built in the 13th century, is an important historical monument. The Valliyoorkavu Temple is another significant religious site that hosts an annual festival attended by thousands of devotees.</p>
+                
+                <h2>Visitor Information</h2>
+                <p>The nearest airport is Calicut International Airport (about 100 km away) and the nearest major railway station is Kozhikode (about 110 km away). Wayanad is well-connected by road to all major cities in Kerala and neighboring states. The best time to visit is from October to May when the weather is pleasant. Monsoon season (June to September) offers lush green landscapes but some areas may be inaccessible due to heavy rains.</p>
+                <p>Accommodation options range from luxury resorts to budget homestays and tree houses. Adventure activities include trekking, rock climbing, bamboo rafting, and wildlife safaris. Local cuisine features traditional Kerala dishes with a focus on rice, coconut, and locally grown spices.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1630394204079-ea5a03a5171a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Chembra Peak">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1626082897332-e04ef6e8d2a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Edakkal Caves">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1590065480004-477ef6d4d5de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Banasura Sagar Dam">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1580739824572-f54c2763b4f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Wayanad Wildlife">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Discover the Natural Beauty of Wayanad</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./kerala.html">Back to Kerala</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alleppey Beach - Kerala's Coastal Gem</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #0077b6 0%, #00b4d8 52%, #90e0ef 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #0077b6;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #0077b6;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #00b4d8;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #0077b6;
+            border-bottom: 2px solid #00b4d8;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(0, 119, 182, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #0077b6;
+        }
+        
+        .info-card h3 {
+            color: #0077b6;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #0077b6;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #00b4d8;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+                Alleppey Tourism
+            </div>
+            <a href="./alleppey.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Alleppey
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Alleppey Beach - The Venice of the East</h1>
+            <p>Where the Arabian Sea meets the backwaters in a spectacular display of natural beauty</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Alleppey Beach">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Alleppey Beach</h2>
+                <p>Alleppey Beach, also known as Alappuzha Beach, is one of the most popular beaches in Kerala, famous for its picturesque beauty and the iconic 137-year-old pier that extends into the sea. The beach offers a perfect blend of natural beauty, historical significance, and recreational activities.</p>
+                <p>Located in the coastal town of Alappuzha (formerly Alleppey), this beach is characterized by its golden sands, swaying palm trees, and the stunning view of the Arabian Sea. The beach is particularly famous for its beautiful sunsets and the lighthouse that offers panoramic views of the coastline.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>Alappuzha, Kerala, India</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-ruler-combined"></i> Beach Length</h3>
+                        <p>Approximately 4 kilometers</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-history"></i> Pier Built</h3>
+                        <p>1886 (137 years old)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-water"></i> Water Activities</h3>
+                        <p>Swimming, Beach Volleyball, Boating</p>
+                    </div>
+                </div>
+                
+                <h2>Historical Significance</h2>
+                <p>Alleppey Beach has played a significant role in Kerala's history as a major trading port during the colonial era. The old pier, built in 1886, stands as a testament to Alleppey's importance as a center for trade and commerce. The British used this port to export spices, coir products, and other local commodities to various parts of the world.</p>
+                <p>The Vijaya Beach Park, located adjacent to the beach, was developed to enhance the tourist experience while preserving the historical significance of the area. The park features beautiful gardens, sculptures, and sitting areas that make it a perfect spot for relaxation and family outings.</p>
+                
+                <h2>Attractions and Activities</h2>
+                <p>Alleppey Beach offers numerous activities for visitors. The old lighthouse, which is open to tourists, provides a breathtaking view of the Arabian Sea and the surrounding areas. The beach is ideal for evening walks, swimming, and enjoying the cool sea breeze.</p>
+                <p>The beach hosts the annual Sand Art Festival, where artists from across the country create magnificent sculptures from sand. Visitors can also enjoy boat rides that connect the beach to the famous Alleppey backwaters, offering a unique experience of transitioning from the sea to serene backwaters.</p>
+                
+                <h2>Visitor Information</h2>
+                <p>The beach is accessible throughout the day, but the best time to visit is during the early morning or late afternoon to avoid the harsh sun and to enjoy beautiful sunrises and sunsets. The lighthouse is open from 3:00 PM to 5:00 PM, and a nominal fee is charged for entry.</p>
+                <p>There are numerous restaurants and food stalls near the beach serving fresh seafood and local Kerala cuisine. Visitors should be cautious while swimming as the sea can have strong currents at times. Lifeguards are present on the beach during peak hours for safety.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Alleppey Beach Sunset">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Historic Pier">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Lighthouse View">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1505852679233-d9fd70aff56d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Beach Activities">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Coastal Beauty of Kerala</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./kerala.html">Back to Kerala</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>

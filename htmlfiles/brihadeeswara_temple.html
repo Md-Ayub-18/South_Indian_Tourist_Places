@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brihadeeswara Temple - Architectural Marvel of Thanjavur</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2a5b9b 0%, #cc954e 52%, #e6c158 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2a5b9b;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #2a5b9b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #cc954e;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2a5b9b;
+            border-bottom: 2px solid #cc954e;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(42, 91, 155, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #2a5b9b;
+        }
+        
+        .info-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Activities Section */
+        .activities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .activity-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .activity-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #2a5b9b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #cc954e;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+               Tamil Nadu Tourism
+            </div>
+            <a href="./Thanjavur.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Thanjavur
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Brihadeeswara Temple - Crown of Chola Architecture</h1>
+            <p>A UNESCO World Heritage Site and magnificent example of Dravidian temple architecture</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="../images/tamilnadu/thanjavur/Thanjavur Brihadeeswarar Temple View.jpg" alt="Panoramic view of Brihadeeswara Temple">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Brihadeeswara Temple</h2>
+                <p>Brihadeeswara Temple, also known as Rajarajesvaram or Peruvudaiyar Kovil, is a Hindu temple dedicated to Shiva located in Thanjavur, Tamil Nadu. It is one of the largest South Indian temples and an exemplary example of fully realized Dravidian architecture. Built by Raja Raja Chola I between 1003 and 1010 AD, the temple turned 1000 years old in 2010.</p>
+                <p>The temple is part of the UNESCO World Heritage Site known as the "Great Living Chola Temples". The vimana (temple tower) is 66 meters (216 ft) high and is among the tallest of its kind in the world. The Kumbam (the apex or the bulbous structure on the top) of the temple is carved out of a single rock and weighs around 80 tons.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-calendar-alt"></i> Built</h3>
+                        <p>1010 AD</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>Thanjavur, Tamil Nadu</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-ruler-vertical"></i> Height</h3>
+                        <p>66 meters (216 ft)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-landmark"></i> Status</h3>
+                        <p>UNESCO World Heritage Site</p>
+                    </div>
+                </div>
+                
+                <h2>History and Significance</h2>
+                <p>The Brihadeeswara Temple was built to grace the throne of the Chola empire by the Tamil king Arulmozhivarman, popularly known as Rajaraja Chola I. It stands as a supreme example of the architectural brilliance of the Chola dynasty and represents an important stage in the evolution of South Indian temple architecture.</p>
+                <p>The temple was designed to represent the cosmic mountain Meru, the abode of the gods. Its construction was a mammoth undertaking, with granite stones brought from a distance of about 60 km. The inscriptions in the temple provide detailed information about the administration, society, economy, and culture of the Chola period.</p>
+                <p>Remarkably, the shadow of the main temple tower never falls on the ground at noon, a architectural marvel that continues to baffle experts. The temple also features one of the largest Shiva lingams in India and the second largest monolithic Nandi (bull) statue.</p>
+                
+                <h2>Architectural Highlights</h2>
+                <p>The Brihadeeswara Temple showcases extraordinary architectural achievements:</p>
+                
+                <div class="activities">
+                    <div class="activity-card">
+                        <h3><i class="fas fa-monument"></i> Vimana</h3>
+                        <p>The towering vimana rises 66 meters high, with 16 elaborately carved stories. The capstone weighs approximately 80 tons and was hauled to the top via a 6 km long inclined ramp.</p>
+                    </div>
+                    <div class="activity-card">
+                        <h3><i class="fas fa-draw-polygon"></i> Frescoes</h3>
+                        <p>The temple walls feature Chola frescoes depicting various scenes from Hindu mythology. These were originally painted between the 10th and 12th centuries.</p>
+                    </div>
+                    <div class="activity-card">
+                        <h3><i class="fas fa-expand-alt"></i> Nandi Mandapa</h3>
+                        <p>The mandapa houses a massive monolithic Nandi (bull), measuring about 6 meters long and 3.7 meters high, carved from a single rock.</p>
+                    </div>
+                    <div class="activity-card">
+                        <h3><i class="fas fa-archway"></i> Gopurams</h3>
+                        <p>The temple complex features two large gopurams (gateway towers), with the main eastern gopuram rising to a height of 30 meters.</p>
+                    </div>
+                </div>
+                
+                <h2>Visitor Information</h2>
+                <p>The temple is open from 6:00 AM to 8:30 PM every day. The best time to visit is between October and March when the weather is pleasant. Early morning and evening visits are recommended to avoid crowds and to witness the temple in the beautiful golden light.</p>
+                <p>There is a nominal entry fee for visitors. Photography is allowed in most areas, but may be restricted in the sanctum sanctorum. Guides are available for hire at the entrance to provide detailed explanations of the temple's history and architecture.</p>
+                <p>Visitors should dress modestly as it is an active place of worship. Footwear must be removed before entering the temple premises. Allocate at least 2-3 hours to fully appreciate the temple complex and its details.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/thanjavur/Magnificent Vimana of Brihadeeswara Temple.jpg" alt="Magnificent Vimana of Brihadeeswara Temple">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/thanjavur/Monolithic Nandi statue.jpg" alt="Monolithic Nandi statue">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/thanjavur/Intricate stone carvings.jpg" alt="Intricate stone carvings">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/thanjavur/Temple rituals and ceremonies.jpg" alt="Temple rituals and ceremonies">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Cultural Heritage of Tamil Nadu</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./Thanjavur.html">Back to Thanjavur</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item, .activity-card');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>

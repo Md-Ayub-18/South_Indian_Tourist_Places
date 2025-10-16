@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saraswathi Mahal Library - Ancient Repository of Knowledge</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2a5b9b 0%, #7d5c34 52%, #d4af37 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2a5b9b;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #2a5b9b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #7d5c34;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2a5b9b;
+            border-bottom: 2px solid #7d5c34;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(42, 91, 155, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #2a5b9b;
+        }
+        
+        .info-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Activities Section */
+        .activities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .activity-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .activity-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #2a5b9b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #7d5c34;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+        
+        /* Special styling for library content */
+        .manuscript-list {
+            columns: 2;
+            column-gap: 2rem;
+            margin: 1rem 0;
+        }
+        
+        .manuscript-list li {
+            margin-bottom: 0.5rem;
+            break-inside: avoid;
+        }
+        
+        @media (max-width: 600px) {
+            .manuscript-list {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+               Tamil Nadu Tourism
+            </div>
+            <a href="./thanjavur.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Thanjavur
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Saraswathi Mahal Library - Treasury of Ancient Wisdom</h1>
+            <p>One of the oldest libraries in Asia, preserving rare manuscripts and palm leaf texts</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="../images/tamilnadu/thanjavur/library-exterior.jpg" alt="Exterior view of Saraswathi Mahal Library">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Saraswathi Mahal Library</h2>
+                <p>Saraswathi Mahal Library, officially known as The Thanjavur Maharaja Serfoji's Saraswathi Mahal Library, is one of the oldest libraries in Asia. Located within the premises of the Thanjavur Palace, this extraordinary repository of knowledge was established during the Nayak rule in the 16th century and greatly expanded by the Maratha rulers of Thanjavur, particularly King Serfoji II (1798-1832).</p>
+                <p>The library preserves and displays a rare collection of over 49,000 palm leaf manuscripts and paper volumes in various Indian and European languages. These include ancient texts on medicine, philosophy, astronomy, mathematics, literature, music, and dance, making it an invaluable resource for researchers and historians.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-calendar-alt"></i> Established</h3>
+                        <p>16th Century (Nayak period)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>Thanjavur Palace Complex, Tamil Nadu</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-book"></i> Collection</h3>
+                        <p>49,000+ manuscripts & volumes</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-trophy"></i> Recognition</h3>
+                        <p>National Importance by Government of India</p>
+                    </div>
+                </div>
+                
+                <h2>History and Significance</h2>
+                <p>The origins of Saraswathi Mahal Library date back to the Nayak rulers of Thanjavur (1535-1675 CE), who established a palace library. However, it was during the rule of the Maratha kings, especially Serfoji II (1798-1832), that the library flourished and became a renowned center of learning.</p>
+                <p>Serfoji II was a visionary ruler and scholar who sent agents throughout India to acquire valuable manuscripts. He also established a department for the preservation and copying of manuscripts on palm leaves and paper. The library was initially meant for the private use of the royal family and court scholars, but was later opened to the public.</p>
+                <p>In 1918, the library was placed under the protection of the Government of India, and it continues to be maintained as an institution of national importance. The library not only preserves ancient knowledge but also serves as a research center for scholars from around the world.</p>
+                
+                <h2>Notable Collections and Treasures</h2>
+                <p>The Saraswathi Mahal Library houses an extraordinary collection of rare manuscripts:</p>
+                
+                <div class="activities">
+                    <div class="activity-card">
+                        <h3><i class="fas fa-leaf"></i> Palm Leaf Manuscripts</h3>
+                        <p>Over 39,000 palm leaf manuscripts in Sanskrit, Tamil, Marathi, Telugu, and other languages, covering diverse subjects from astronomy to medicine.</p>
+                    </div>
+                    <div class="activity-card">
+                        <h3><i class="fas fa-file-alt"></i> Paper Manuscripts</h3>
+                        <p>More than 10,000 paper manuscripts, including beautifully illustrated editions and European works collected by Serfoji II.</p>
+                    </div>
+                    <div class="activity-card">
+                        <h3><i class="fas fa-map"></i> Rare Maps & Prints</h3>
+                        <p>A collection of rare historical maps, including the first Indian map printed in India, and colored European prints.</p>
+                    </div>
+                    <div class="activity-card">
+                        <h3><i class="fas fa-paint-brush"></i> Art & Illustrations</h3>
+                        <p>Exquisitely illustrated manuscripts, including the famous "Serfoji's Atlas" containing 86 maps of various countries.</p>
+                    </div>
+                </div>
+                
+                <h2>Highlights of the Collection</h2>
+                <p>The library's most prized possessions include:</p>
+                <ul class="manuscript-list">
+                    <li>Ancient Ayurvedic texts with detailed medical knowledge</li>
+                    <li>Treatises on Indian classical music and dance</li>
+                    <li>Rare astronomical works with detailed charts</li>
+                    <li>Historical accounts of the Maratha rule in Thanjavur</li>
+                    <li>European books on science and philosophy collected by Serfoji II</li>
+                    <li>Illustrated Ramayana and Mahabharata manuscripts</li>
+                    <li>Works on Tamil grammar and literature</li>
+                    <li>Texts on yoga and spiritual practices</li>
+                </ul>
+                
+                <h2>Visitor Information</h2>
+                <p>The Saraswathi Mahal Library is open from 10:00 AM to 5:00 PM on weekdays, and from 10:00 AM to 1:00 PM on Saturdays. It remains closed on Sundays and government holidays. The best time to visit is between October and March when the weather is pleasant.</p>
+                <p>There is a nominal entry fee for visitors, with separate charges for photography. Researchers need to obtain prior permission for accessing specific manuscripts. Guided tours are available and highly recommended to fully appreciate the historical significance of the collection.</p>
+                <p>The library is located within the Thanjavur Palace complex and is easily accessible by auto-rickshaws, taxis, and local buses. Visitors should maintain silence within the library premises and follow the guidelines for preserving these ancient treasures.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/thanjavur/library-interior.jpg" alt="Interior view of Saraswathi Mahal Library">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/thanjavur/palm-leaf-manuscripts.jpg" alt="Ancient palm leaf manuscripts">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/thanjavur/library-artifacts.jpg" alt="Historical artifacts in the library">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/tamilnadu/thanjavur/manuscript-display.jpg" alt="Display of rare manuscripts">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Cultural Heritage of Tamil Nadu</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./thanjavur.html">Back to Thanjavur</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item, .activity-card');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>

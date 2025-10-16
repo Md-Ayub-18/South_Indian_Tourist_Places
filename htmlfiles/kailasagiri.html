@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kailasagiri Hill Park - Visakhapatnam's Scenic Wonderland</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2a5b9b 0%, #56cc54 52%, #ceed53 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2a5b9b;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #2a5b9b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2a5b9b;
+            border-bottom: 2px solid #56cc54;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(42, 91, 155, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #2a5b9b;
+        }
+        
+        .info-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #2a5b9b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #56cc54;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+                Visakhapatnam Tourism
+            </div>
+            <a href="./visakhapatnam.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Visakhapatnam
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Kailasagiri Hill Park - Vizag's Panoramic Paradise</h1>
+            <p>A beautifully maintained hill park offering breathtaking views of the Bay of Bengal</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="https://images.unsplash.com/photo-1580739824572-f54c2763b4f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Kailasagiri Hill Park">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Kailasagiri Hill Park</h2>
+                <p>Kailasagiri Hill Park is one of the most popular tourist attractions in Visakhapatnam, situated atop a hill at an altitude of 360 feet above sea level. Spread over 380 acres, this beautifully landscaped park offers panoramic views of the Bay of Bengal, Visakhapatnam city, and the surrounding Eastern Ghats. The park was developed by the Visakhapatnam Metropolitan Region Development Authority (VMRDA) and inaugurated in 1998.</p>
+                <p>The name "Kailasagiri" is derived from Mount Kailash, the abode of Lord Shiva, and the park features a massive 40-foot tall statue of Shiva and Parvati that has become an iconic symbol of Visakhapatnam. The park is known for its well-maintained gardens, floral clock, ropeway connectivity, and various recreational facilities that make it a perfect destination for families, nature lovers, and photography enthusiasts.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-mountain"></i> Elevation</h3>
+                        <p>360 feet (110 meters)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-expand-arrows-alt"></i> Area</h3>
+                        <p>380 acres</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-calendar-alt"></i> Established</h3>
+                        <p>1998</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>Hill Top, Visakhapatnam, Andhra Pradesh</p>
+                    </div>
+                </div>
+                
+                <h2>Main Attractions</h2>
+                <p>Kailasagiri Hill Park offers numerous attractions for visitors. The most prominent is the giant statue of Lord Shiva and Goddess Parvati, which stands majestically overlooking the city. The floral clock, one of the largest in India, is another major attraction that features beautiful flower arrangements that change with the seasons.</p>
+                <p>The park features a ropeway (Udan Khatola) that connects the foothill to the summit, offering breathtaking aerial views during the ride. Other attractions include the Titanic Viewpoint, Shanku Chakra Nama Viewpoint, beautifully landscaped gardens, children's play area, toy train ride, and numerous viewpoints that offer spectacular vistas of the coastline and city below.</p>
+                
+                <h2>Ropeway Experience</h2>
+                <p>The Kailasagiri Ropeway is one of the key features that enhances the visitor experience. This aerial tramway connects the beach road to the hilltop, covering a distance of 380 meters with a vertical rise of 120 meters. The ropeway ride takes approximately 3-4 minutes and offers stunning panoramic views of the Bay of Bengal, Visakhapatnam port, and the city landscape.</p>
+                <p>The ropeway operates with modern cable cars that can accommodate 6 passengers each. The ride is particularly spectacular during sunrise and sunset when the sky transforms into beautiful hues of orange and pink. The ropeway has become a major tourist attraction in itself, providing both convenience and an unforgettable experience for visitors.</p>
+                
+                <h2>Flora and Landscape</h2>
+                <p>Kailasagiri Hill Park is renowned for its beautifully maintained gardens and lush green landscape. The park features extensive lawns, flower beds, ornamental plants, and shady trees that create a serene environment. The floral clock is a masterpiece of horticultural art, with its hands actually functioning and showing the correct time.</p>
+                <p>The park authorities have developed themed gardens including a Japanese garden, Mughal garden, and various other landscaped areas. The well-paved walking tracks, sitting areas, and viewpoints are strategically placed to allow visitors to enjoy the natural beauty while taking in the magnificent views of the coastline.</p>
+                
+                <h2>Visitor Information</h2>
+                <p>Kailasagiri Hill Park is open daily from 10:00 AM to 8:00 PM. The ropeway operates from 10:30 AM to 7:30 PM. There is a nominal entry fee for the park, with additional charges for the ropeway ride, toy train, and other activities. The best time to visit is during the early morning or late afternoon to avoid the midday heat and to enjoy the spectacular sunrise or sunset views.</p>
+                <p>The park is located about 8 km from Visakhapatnam Railway Station and 20 km from Visakhapatnam Airport. Visitors can reach the hilltop by road or via the ropeway. The months from October to March offer the most pleasant weather for visiting, while the monsoon season (June to September) brings lush greenery but may have limited visibility due to clouds and rain.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1591843336747-642350c6e474?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Shiva-Parvati Statue">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Ropeway View">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1512273222628-4caea86f5e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Floral Clock">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1518834107812-67d4d91804cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8f极端的ufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Panoramic View">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Beauty of Visakhapatnam</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./visakhapatnam.html">Back to Visakhapatnam</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>

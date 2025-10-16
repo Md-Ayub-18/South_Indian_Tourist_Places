@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padmanabhaswamy Temple - Divine Abode of Lord Vishnu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2a5b9b 0%, #56cc54 52%, #ceed53 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2a5b9b;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #2a5b9b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2a5b9b;
+            border-bottom: 2px solid #56cc54;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(42, 91, 155, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #2a5b9b;
+        }
+        
+        .info-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #2a5b9b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #56cc54;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+                thiruvananthapuram Tourism
+            </div>
+            <a href="./Thirvananthapram.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Thirvananthapram
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Padmanabhaswamy Temple - Divine Abode of Lord Vishnu</h1>
+            <p>One of the richest and most revered temples in India, known for its architectural splendor</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="../images/kerala/padmanabhaswamy/padmanabhaswamy-main.jpg" alt="Padmanabhaswamy Temple">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Padmanabhaswamy Temple</h2>
+                <p>The Padmanabhaswamy Temple is a Hindu temple located in Thiruvananthapuram, the capital of Kerala. It is dedicated to Lord Vishnu, who is worshipped here in the Anantha Shayana posture (reclined on the serpent Anantha). The temple is one of the 108 Divya Desams, the holy abodes of Vishnu revered in the works of the Tamil Azhwar saints.</p>
+                <p>The temple is renowned for its magnificent architecture, combining the Kerala style and the Dravidian style of architecture. The temple's main deity is a massive idol of Lord Vishnu in a reclining position over the serpent Anantha. The temple gained international attention in recent years when secret vaults were opened, revealing immense wealth and treasures.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-history"></i> Built In</h3>
+                        <p>8th century CE (current structure 18th century)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-archway"></i> Architectural Style</h3>
+                        <p>Kerala-Dravidian fusion</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-ruler-vertical"></i> Gopuram Height</h3>
+                        <p>35 meters (115 ft)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>Thiruvananthapuram, Kerala</p>
+                    </div>
+                </div>
+                
+                <h2>Architectural Marvel</h2>
+                <p>The Padmanabhaswamy temple features a seven-story gopuram (gateway tower) built in the Pandyan style. The temple complex has corridors with 365 and one-quarter sculptured granite-stone pillars with elaborate carvings. The main shrine is located under the gold-plated dome and has three doors, offering views of the deity's three parts - the navel and right hand from the first door, chest and left hand from the second, and feet from the third.</p>
+                <p>The temple stands as a magnificent example of South Indian temple architecture, with its intricate stone carvings, massive corridors, and the stunning 100-foot-high gold-plated flagstaff. The temple tank, known as Padma Theertham, is located on the eastern side of the temple complex.</p>
+                
+                <h2>Religious Significance</h2>
+                <p>The Padmanabhaswamy Temple is considered one of the most important Vaishnavite temples in India. It finds mention in several ancient texts including the Puranas. The temple is closely associated with the Travancore royal family, who were devotees of Lord Padmanabha and ruled the kingdom as his servants (Padmanabha Dasas).</p>
+                <p>The temple follows strict religious protocols and traditions. Only Hindus are allowed to enter the temple premises, and they must follow a strict dress code. The temple is renowned for its festivals, particularly the biannual Alpashi and Painkuni festivals, which feature grand processions with caparisoned elephants.</p>
+                
+                <h2>Mysterious Vaults and Treasures</h2>
+                <p>In recent years, the temple gained worldwide attention when a Supreme Court committee discovered immense wealth in some of its underground vaults. The treasure, estimated to be worth over $20 billion, includes gold idols, diamonds, jewelery, and other precious items accumulated over centuries. The discovery made the Padmanabhaswamy Temple one of the wealthiest religious institutions in the world.</p>
+                <p>Vault B remains unopened due to religious beliefs and legends suggesting it is protected by supernatural forces. The treasure discovery has led to enhanced security measures and a renewed interest in the temple's history and heritage.</p>
+                
+                <h2>Visitor Information</h2>
+                <p>The temple is open from 3:30 AM to 12:00 PM and from 5:00 PM to 8:30 PM. The best time to visit is during the early morning hours to avoid crowds and experience the spiritual atmosphere. Non-Hindus are not allowed inside the temple premises but can view parts of the exterior architecture. Visitors must follow the dress code (men: dhoti; women: sari or salwar kameez) and are required to remove footwear before entering.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="../images/kerala/padmanabhaswamy/gopuram.jpg" alt="Temple Gopuram">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/kerala/padmanabhaswamy/corridor.jpg" alt="Temple Corridors">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/kerala/padmanabhaswamy/festival.jpg" alt="Temple Festival">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/kerala/padmanabhaswamy/architecture.jpg" alt="Intricate Architecture">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Spiritual Heritage of Kerala</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./kerala.html">Back to Kerala</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mysore Palace - The Royal Abode of Mysore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2a5b9b 0%, #56cc54 52%, #ceed53 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2a5b9b;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #2a5b9b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2a5b9b;
+            border-bottom: 2px solid #56cc54;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(42, 91, 155, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #2a5b9b;
+        }
+        
+        .info-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #2a5b9b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #56cc54;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+                Mysore Tourism
+            </div>
+            <a href="./mysore.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Mysore
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Mysore Palace - The Royal Abode of Mysore</h1>
+            <p>A magnificent example of Indo-Saracenic architecture and the official residence of the Wadiyar dynasty</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="../images/karnataka/mysore/mysore-palace-main.jpg" alt="Mysore Palace">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Mysore Palace</h2>
+                <p>Mysore Palace, also known as Amba Vilas Palace, is a historical palace and a royal residence located in Mysore, Karnataka. It is the official residence of the Wadiyar dynasty and the seat of the Kingdom of Mysore. The palace is one of the most famous tourist attractions in India, after the Taj Mahal, with more than 6 million annual visitors.</p>
+                <p>The current palace was built between 1897 and 1912, after the old wooden palace was destroyed by fire in 1897. The British architect Henry Irwin was commissioned to design the new palace, which combines Hindu, Muslim, Rajput, and Gothic architectural styles, characteristic of Indo-Saracenic architecture.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-history"></i> Built In</h3>
+                        <p>1912 (current structure)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-archway"></i> Architectural Style</h3>
+                        <p>Indo-Saracenic</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-arrows-alt"></i> Total Area</h3>
+                        <p>72 acres</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>Mysore, Karnataka</p>
+                    </div>
+                </div>
+                
+                <h2>Architectural Marvel</h2>
+                <p>The palace is a three-storied stone structure with marble domes and a 145-foot five-story tower. The palace is surrounded by a large garden. The entrance gate and arch hold the emblem and coat of arms of the kingdom of Mysore, around which is written the kingdom's motto in Sanskrit: "न बिभॆति कदाचन" (never terrified).</p>
+                <p>The palace houses two durbar halls (ceremonial meeting halls of the royal court) and incorporates a unique blend of architectural styles. The interior of the palace is lavishly decorated with intricate carvings, stained glass ceilings, mosaic floors, and magnificent paintings depicting the royal procession and other scenes from Hindu mythology.</p>
+                
+                <h2>Historical Significance</h2>
+                <p>Mysore Palace was the official residence of the Wadiyar dynasty, who ruled the Kingdom of Mysore from 1399 to 1950. The Wadiyars were patrons of art and culture and contributed significantly to the cultural development of Mysore. The palace remains an important ceremonial center, hosting the famous Mysore Dasara festival celebrations.</p>
+                <p>During the Dasara festival, the palace is illuminated with nearly 100,000 light bulbs, creating a spectacular sight. The royal throne is displayed during this time, and cultural performances take place in the palace grounds. The festival culminates with a grand procession featuring decorated elephants, camels, horses, and cultural troupes.</p>
+                
+                <h2>Visitor Information</h2>
+                <p>The palace is open daily from 10:00 AM to 5:30 PM. The entrance fee for Indian tourists is ₹70, and for foreign tourists is ₹200. There is an additional charge for photography. The best time to visit is during the Dasara festival (usually in October) when the palace is spectacularly illuminated. Sound and light shows are held in the evenings in both Kannada and English languages.</p>
+                <p>Visitors are required to remove footwear before entering the palace premises. The palace management provides shoe storage facilities. Guided tours are available, and audio guides can be rented for a more detailed understanding of the palace's history and architecture.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="../images/karnataka/mysore/palace-illumination.jpg" alt="Illuminated Mysore Palace">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/karnataka/mysore/palace-interior.jpg" alt="Palace Interior">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/karnataka/mysore/dasara-festival.jpg" alt="Dasara Festival">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/karnataka/mysore/palace-architecture.jpg" alt="Palace Architecture">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Royal Heritage of Mysore</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./mysore.html">Back to Mysore</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>

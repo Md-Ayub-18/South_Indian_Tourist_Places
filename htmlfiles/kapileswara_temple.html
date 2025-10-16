@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Kapileswara Swamy Temple - Tirupati's Sacred Shiva Shrine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2a5b9b 0%, #56cc54 52%, #ceed53 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2a5b9b;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #2a5b9b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2a5b9b;
+            border-bottom: 2px solid #56cc54;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(42, 91, 155, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #2a5b9b;
+        }
+        
+        .info-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #2a5b9b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #56cc54;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+                Tirupati Tourism
+            </div>
+            <a href="./tirupati.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Tirupati
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Sri Kapileswara Swamy Temple - Tirupati's Sacred Shiva Shrine</h1>
+            <p>An ancient temple dedicated to Lord Shiva at the foothills of Tirumala</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="../images/andhrapradesh/tirupati/kapileswara-temple.jpg" alt="Sri Kapileswara Swamy Temple">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Sri Kapileswara Swamy Temple</h2>
+                <p>The Sri Kapileswara Swamy Temple is an ancient Hindu temple dedicated to Lord Shiva, located at the foothills of Tirumala in Tirupati, Andhra Pradesh. This temple is one of the very few Shiva temples in the predominantly Vaishnava shrine area of Tirumala-Tirupati. The temple is situated near the natural waterfall known as Kapila Theertham, which adds to its spiritual significance.</p>
+                <p>According to legend, the temple is associated with the sage Kapila Maharishi, who performed intense penance here to Lord Shiva. Pleased with his devotion, Lord Shiva appeared before him and granted him a boon. The temple is believed to be the place where Lord Shiva and Goddess Parvati gave darshan to the sage, and thus it became known as Kapileswara Swamy Temple.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-history"></i> Built In</h3>
+                        <p>Unknown (Ancient times, renovated many times)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-archway"></i> Architectural Style</h3>
+                        <p>Dravidian architecture</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-water"></i> Sacred Waterfall</h3>
+                        <p>Kapila Theertham</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>Tirupati, Andhra Pradesh</p>
+                    </div>
+                </div>
+                
+                <h2>Architectural Features</h2>
+                <p>The Sri Kapileswara Swamy Temple showcases classic Dravidian architectural elements. The temple features a rajagopuram (main tower) at the entrance, which is adorned with intricate sculptures of various deities. The sanctum sanctorum houses the main deity, Lord Kapileswara (Shiva), in the form of a lingam.</p>
+                <p>The temple complex includes separate shrines for Goddess Parvati (as Kamakshi), Lord Ganesha, Lord Subramanya, and Navagrahas. The temple tank, known as Kapila Theertham, is located adjacent to the temple and is considered highly sacred. Devotees take a holy dip in this tank before offering prayers to Lord Shiva.</p>
+                
+                <h2>Religious Significance</h2>
+                <p>The Sri Kapileswara Swamy Temple holds great religious significance for Shiva devotees. It is believed that visiting this temple before proceeding to the Venkateswara Temple in Tirumala brings completeness to the pilgrimage. The temple is particularly crowded during Maha Shivaratri, when special poojas and abhishekams are performed throughout the night.</p>
+                <p>According to local belief, the waterfall (Kapila Theertham) is where Lord Shiva purified himself after the death of Daksha in the Daksha Yagna. The temple is also associated with the legend of Lord Vishnu taking the form of Mohini to distribute the nectar of immortality, and Lord Shiva being captivated by Mohini's beauty.</p>
+                
+                <h2>Special Features</h2>
+                <p>One of the unique aspects of this temple is the natural waterfall called Kapila Theertham, which flows through a rock formation that resembles a cow's mouth (go-mukham). The water is believed to have medicinal properties and is considered sacred. The temple also features a cave where sage Kapila is said to have meditated.</p>
+                <p>Unlike most Shiva temples where the lingam is installed on a square base (peetham), the lingam here is installed on a hexagonal base, which is considered rare and specially significant. The temple also celebrates annual festivals like Karthika Deepam, Sankranti, and monthly pradoshams with great devotion.</p>
+                
+                <h2>Visitor Information</h2>
+                <p>The temple is open from 6:00 AM to 1:00 PM and from 4:00 PM to 8:30 PM. The best time to visit is during the early morning hours when abhishekam is performed. The temple can be reached easily from Tirupati city center, located about 3 km away.</p>
+                <p>There is no entry fee, but special poojas and abhishekams may have charges. Visitors are advised to wear traditional attire. The temple is wheelchair accessible to most areas. The best time to visit the waterfall is during the monsoon season when it is in full flow.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="../images/andhrapradesh/tirupati/kapileswara-gopuram.jpg" alt="Temple Gopuram">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/andhrapradesh/tirupati/kapila-theertham.jpg" alt="Kapila Theertham Waterfall">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/andhrapradesh/tirupati/kapileswara-shrine.jpg" alt="Main Shrine">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/andhrapradesh/tirupati/kapileswara-festival.jpg" alt="Temple Festival">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Spiritual Heritage of Tirupati</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./tirupati.html">Back to Tirupati</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>

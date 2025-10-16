@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borra Caves - Araku Valley's Natural Wonder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2a5b9b 0%, #56cc54 52%, #ceed53 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2a5b9b;
+            text-align: center;
+        }
+        
+        /* Back Button */
+         .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #3e6a3e;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2a5b9b;
+            border-bottom: 2px solid #56cc54;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(42, 91, 155, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #2a5b9b;
+        }
+        
+        .info-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #2a5b9b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #56cc54;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+                Araku Valley Tourism
+            </div>
+            <a href="./araku.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Araku Valley
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Borra Caves - Araku Valley's Natural Wonder</h1>
+            <p>Millions of years old limestone caves with spectacular stalactite and stalagmite formations</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="../images/andhrapradesh/arakuvally/borra-caves-main.jpg" alt="Borra Caves">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Borra Caves</h2>
+                <p>Borra Caves, also known as Borra Guhalu, are located in the Ananthagiri hills of the Araku Valley in the Visakhapatnam district of Andhra Pradesh. Situated at an elevation of about 705 meters (2,313 feet) above sea level, these caves are one of the largest in India and a fascinating natural wonder. The caves were discovered in 1807 by British geologist William King George.</p>
+                <p>The caves derive their name from 'Borra' which means hole in the local language. These spectacular caves were formed by the flow of the Gosthani River over limestone deposits, creating fascinating formations over millions of years. The caves extend to a depth of 80 meters and are famous for their stunning stalactite and stalagmite formations.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-mountain"></i> Elevation</h3>
+                        <p>705 meters (2,313 feet)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-ruler-combined"></i> Depth</h3>
+                        <p>80 meters (262 feet)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marked-alt"></i> Distance from Araku</h3>
+                        <p>36 km (22 miles)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-calendar-alt"></i> Best Time to Visit</h3>
+                        <p>October to March</p>
+                    </div>
+                </div>
+                
+                <h2>Geological Formation</h2>
+                <p>The Borra Caves were formed as a result of the action of the Gosthani River, which flows through the limestone area. The river water, which is rich in carbonic acid, dissolved the limestone deposits, leading to the formation of these beautiful caves over millions of years. The continuous seepage of water through the limestone resulted in the formation of various stalactite and stalagmite structures.</p>
+                <p>The caves cover an area of approximately 2 square kilometers and feature fascinating formations that resemble various shapes including a Shiva-Parvati idol, a human brain, a crocodile, a temple, and many other natural sculptures. The main cave extends to about 100 meters horizontally and 75 meters vertically, with several lateral passages and chambers.</p>
+                
+                <h2>Historical and Cultural Significance</h2>
+                <p>Local tribes believe that the caves are sacred due to the presence of a Shivalingam-shaped stalagmite and an idol of a cow (Kamadhenu) inside the caves. According to legend, a cowherd lost his cow while grazing and later discovered that it had fallen into a hole. When he went down to rescue the animal, he found that the cow had accidentally struck a stone, causing blood to ooze out. The stone turned out to be a natural lingam, and the area became a place of worship.</p>
+                <p>The caves also have evidence of human habitation dating back to the Paleolithic age, with tools and weapons discovered during archaeological excavations. The local tribes, particularly the Jatapu and Nooka Dora tribes, consider the caves sacred and celebrate festivals here.</p>
+                
+                <h2>Visitor Experience</h2>
+                <p>Visitors to Borra Caves can explore well-lit pathways that run through the caves, making it accessible for tourists of all ages. The Andhra Pradesh Tourism Development Corporation has developed the site with proper lighting, walkways, and safety features. The temperature inside the caves remains pleasant throughout the year, making it comfortable for exploration.</p>
+                <p>The caves feature several interesting formations that have been given names based on their shapes, such as the Shiva-Parvati formation, Mother-Child formation, Human Brain formation, Crocodile formation, and many others. The natural skylight at the entrance provides a dramatic view of the interior formations when sunlight streams in.</p>
+                
+                <h2>Visitor Information</h2>
+                <p>The caves are open from 10:00 AM to 5:00 PM every day. The entry fee is ₹60 for adults and ₹45 for children. Photography is allowed but may require an additional fee for professional equipment. The best time to visit is between October and March when the weather is pleasant. The caves are located about 36 km from Araku Valley and 90 km from Visakhapatnam.</p>
+                <p>Visitors should wear comfortable walking shoes as the terrain can be uneven. The caves are well-maintained with proper lighting and pathways, but some areas might be slippery. Guided tours are available and recommended to fully appreciate the geological and historical significance of the formations. There are basic facilities like restrooms and small eateries available near the cave entrance.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="../images/andhrapradesh/arakuvally/borra-caves-formation.jpg" alt="Stalactite Formations">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/andhrapradesh/arakuvally/borra-caves-interior.jpg" alt="Cave Interior">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/andhrapradesh/arakuvally/borra-caves-lighting.jpg" alt="Lighting in Caves">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/andhrapradesh/arakuvally/borra-caves-entrance.jpg" alt="Cave Entrance">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Natural Wonders of Araku Valley</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./araku_valley.html">Back to Araku Valley</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>

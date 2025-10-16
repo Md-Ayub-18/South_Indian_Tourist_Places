@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethipothala Falls - Natural Wonder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2a5b9b 0%, #56cc54 52%, #ceed53 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5极15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2a5b9b;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #2a5b9b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2a5b9b;
+            border-bottom: 2px solid #5654;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(42, 91, 155, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #2a5b9b;
+        }
+        
+        .info-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: #2a5b9b;
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer极links a {
+            color: #2a5b9b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #56cc54;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250极;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+                Nalgonda Tourism
+            </div>
+            <a href="nalgonda.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Nalgonda
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Ethipothala Falls - Natural Wonder</h1>
+            <p>A magnificent three-tiered waterfall where the Chandravanka River cascades into a breathtaking lagoon</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="../images/telangana/nalgonda/ethipothala-falls-nagarjuna-sagar.jpg" alt="Ethipothala Falls">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Ethipothala Falls</h2>
+                <p>Ethipothala Falls is a stunning waterfall located about 11 km from Nagarjuna Sagar Dam in the Nalgonda district of Telangana. The waterfall is formed by the Chandravanka River, which originates from the nearby hills and cascades down from a height of 21.5 meters (70 feet) into a beautiful lagoon.</p>
+                <p>The name 'Ethipothala' translates to 'lift and pour' in the local language, which perfectly describes the way the water seems to be lifted and poured down the rocky cliffs. The falls are particularly spectacular during the monsoon season when the water flow is at its peak.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-ruler-vertical"></i> Height</h3>
+                        <p>21.5 meters (70 feet)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-water"></i> Water Source</h3>
+                        <p>Chandravanka River</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Distance from Nagarjuna Sagar</h3>
+                        <p>11 km</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-calendar-alt"></i> Best Time to Visit</h3>
+                        <p>July to December</p>
+                    </div>
+                </div>
+                
+                <h2>Geological Formation</h2>
+                <p>Ethipothala Falls is a spectacular example of a tiered waterfall, featuring three distinct cascades. The waterfall has carved its way through ancient rock formations over thousands of years, creating a beautiful natural amphitheater.</p>
+                <p>The surrounding area is rich in geological diversity, with various types of rock formations including granite and limestone. The constant flow of water has created natural pools and fascinating erosion patterns on the rock surfaces.</p>
+                
+                <h2>Flora and Fauna</h2>
+                <p>The area around Ethipothala Falls is rich in biodiversity. The lush green surroundings provide habitat for various species of birds, butterflies, and small mammals. The mist created by the falling water supports unique micro-ecosystems with specialized plant life.</p>
+                <p>Visitors can often spot kingfishers, egrets, and other water birds around the lagoon. The surrounding forests are home to several species of monkeys, monitor lizards, and various reptiles.</p>
+                
+                <h2>Mythological Significance</h2>
+                <p>According to local legend, the waterfall is associated with several mythological stories. One popular belief is that the waterfall was created by Lord Shiva to provide water for sages who were meditating in the area.</p>
+                <p>Another legend suggests that the waterfall was a bathing place for celestial nymphs, and the name 'Ethipothala' derives from the way they would pour water from containers while bathing.</p>
+                
+                <h2>Tourist Experience</h2>
+                <p>Visitors to Ethipothala Falls can enjoy several activities:</p>
+                <ul>
+                    <li><strong>Viewing Platforms:</strong> Well-maintained platforms offer spectacular views of the waterfall</li>
+                    <li><strong>Trekking:</strong> Nature trails around the falls area for hiking enthusiasts</li>
+                    <li><strong>Photography:</strong> Excellent opportunities for nature and landscape photography</li>
+                    <li><strong>Bird Watching:</strong> Ideal spot for observing various bird species</li>
+                    <li><strong>Picnicking:</strong> Designated areas for family picnics amidst nature</li>
+                </ul>
+                
+                <h2>Visitor Information</h2>
+                <p>Ethipothala Falls is open to visitors every day from 9:00 AM to 5:30 PM. The best time to visit is during and immediately after the monsoon season (July to December) when the waterfall is at its most spectacular.</p>
+                <p>There are basic facilities available including parking, restrooms, and small food stalls. Visitors are advised to wear comfortable footwear as some walking is required to reach the best viewing spots. Swimming is not recommended due to strong currents, especially during the monsoon season.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="../images/telangana/nalgonda/waterfall wide.jpeg" alt="Ethipothala Falls Wide View">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/telangana/nalgonda/ethipothala-falls.jpg" alt="Waterfall Closeup">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/telangana/nalgonda/Lagoon at Base.jpeg" alt="Lagoon at Base">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/telangana/nalgonda/Falls During Monsoon.jpeg" alt="Falls During Monsoon">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Natural Wonders of Nalgonda</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./nalgonda.html">Back to Nalgonda</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (极 * 100));
+            });
+        });
+    </script>
+</body>
+</html>

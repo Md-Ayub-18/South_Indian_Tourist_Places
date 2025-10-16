@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Venkateswara Temple - Tirupati's Sacred Abode</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2a5b9b 0%, #56cc54 52%, #ceed53 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2a5b9b;
+            text-align: center;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #2a5b9b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #56cc54;
+            transform: translateY(-3px);
+        }
+        
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .attraction-detail {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-content {
+            padding: 2rem;
+        }
+        
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2a5b9b;
+            border-bottom: 2px solid #56cc54;
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background-color: rgba(42, 91, 155, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #2a5b9b;
+        }
+        
+        .info-card h3 {
+            color: #2a5b9b;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        extreme.footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #2a5b9b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #56cc54;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-header {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header>
+            <div class="logo">
+                Tirupati Tourism
+            </div>
+            <a href="./tirupati.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Tirupati
+            </a>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>Sri Venkateswara Temple - Sacred Abode of Lord Venkateswara</h1>
+            <p>One of the richest and most visited religious places in the world, nestled in the Tirumala Hills</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="attraction-detail">
+            <div class="detail-header">
+                <img src="../images/andhra-pradesh/tirupati/venkateswara-temple.jpg" alt="Sri Venkateswara Temple">
+            </div>
+            
+            <div class="detail-content">
+                <h2>About Sri Venkateswara Temple</h2>
+                <p>The Sri Venkateswara Temple, also known as Tirumala Temple, is a renowned Hindu temple dedicated to Lord Venkateswara, an incarnation of Lord Vishnu. Located in the hill town of Tirumala near Tirupati in Andhra Pradesh, this ancient temple is one of the most sacred pilgrimage sites for Hindus and is often referred to as the "Spiritual Capital of Andhra Pradesh."</p>
+                <p>The temple is believed to have been constructed over 2000 years ago and has been mentioned in various ancient Hindu texts. The presiding deity, Lord Venkateswara, is also known by other names such as Balaji, Srinivasa, and Govinda. The temple complex spans over 26 acres and features magnificent Dravidian architecture with intricate carvings and gold-plated structures.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-history"></i> Established</h3>
+                        <p>Approximately 2,000 years ago</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-archway"></i> Architectural Style</h3>
+                        <p>Dravidian Architecture</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-mountain"></i> Location</h3>
+                        <p>Tirumala Hills, Andhra Pradesh</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-university"></i> Dedicated To</h3>
+                        <p>Lord Venkateswara (Vishnu)</p>
+                    </div>
+                </div>
+                
+                <h2>Architectural Marvel</h2>
+                <p>The Sri Venkateswara Temple showcases exquisite Dravidian architecture with its towering gopurams (gateway towers), mandapams (halls), and prakarams (circumambulatory paths). The main temple features the Ananda Nilayam (abode of happiness), which is the sanctum sanctorum housing the deity. The vimana (tower) over the sanctum is covered with gold plates, earning it the name "Swarna Vimana".</p>
+                <p>The temple complex includes several notable structures such as the Ranga Mandapam, Tirumamani Mandapam, and the Sampangi Pradakshinam. The temple's infrastructure has been continuously expanded over centuries, with recent additions including modern queue complexes, accommodation facilities, and administrative buildings to handle the massive influx of devotees.</p>
+                
+                <h2>Religious Significance</h2>
+                <p>The Sri Venkateswara Temple holds immense religious significance in Hinduism. It is considered one of the eight Swayambhu Kshetras (self-manifested shrines) of Lord Vishnu. According to Hindu mythology, Lord Venkateswara is believed to have descended to earth to save mankind from the adversities of Kali Yuga.</p>
+                <p>The temple is famous for its hair-toning ceremony where devotees offer their hair to the deity as a symbol of surrender. It is also renowned for its laddu prasadam, which is distributed to devotees and has received Geographical Indication tag. The temple attracts millions of pilgrims annually, making it one of the most visited religious sites in the world.</p>
+                
+                <h2>Visitor Information</h2>
+                <p>The temple is open from 3:00 AM to 11:30 PM, with different darshan timings throughout the day. Various types of darshan tickets are available, including free darshan, special entry darshan, and VIP darshan. The best time to visit is between September and March when the weather is pleasant.</p>
+                <p>Devotees are required to follow a strict dress code (men: dhoti or formal pants with shirt; women: sari or salwar kameez). Electronic items, mobile phones, and leather goods are not allowed inside the temple complex. The Tirumala Tirupati Devasthanams (TTD) provides various accommodation options, food facilities, and transportation services for pilgrims.</p>
+                
+                <h2>Photo Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="../images/andhra-pradesh/tirupati/temple-gopuram.jpg" alt="Temple Gopuram">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/andhra-pradesh/tirupati/main-deity.jpg" alt="Main Deity">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/andhra-pradesh/tirupati/temple-complex.jpg" alt="Temple Complex">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/andhra-pradesh/tirupati/pilgrims-darshan.jpg" alt="Pilgrims during Darshan">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Explore the Spiritual Heritage of Tirupati</h3>
+                
+                <div class="footer-links">
+                    <a href="./states.html">Go To Home</a>
+                    <a href="./tirupati.html">Back to Tirupati</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-card, .gallery-item');
+            
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>

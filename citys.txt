@@ -1,0 +1,40 @@
+cities in telangana 
+	Hyderabad
+    Warangal
+    Nalgonda District
+    Bhadrachalam
+
+karnakata 
+    	Bangalore
+        Mysore
+        Hampi (Near Hospet)
+        Coorg (Madikeri)
+        Shimoga District
+        Shravanabelagola
+        Belur & Halebidu
+Tamil Nadu
+    	Chennai
+        Mahabalipuram
+        Madurai
+        Ooty (Udhagamandalam)
+        Thanjavur (Tanjore)
+        Tenkasi District
+        Chettinad Region (Karaikudi)
+Andhra Pradesh
+        Visakhapatnam (Vizag)
+        Tirumala (Near Tirupati)
+        Araku Valley (Near Vizag)
+        Kurnool District
+        Vijayawada
+        Lepakshi (Anantapur Dist.)
+        Nellore District
+Kerala
+        Kochi (Fort Kochi)
+        Alleppey (Alappuzha)
+        Munnar
+        Thekkady
+        Thiruvananthapuram
+        Thrissur District
+    
+    
+
